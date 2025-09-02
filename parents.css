@@ -206,7 +206,7 @@ body {
 
 /* --- Feature 3 --- */
 .feature-phone3 .phone-mockup{
-  transform: perspective(1000px) rotateY(0deg) translateY(30px);
+  transform: perspective(1000px) rotateY(0deg) translateY(-60px);
 }
 .feature-phone3 .feature-title{ color:#1D4ED8; }
 .feature-phone3 .feature-content {
