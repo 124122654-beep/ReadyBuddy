@@ -535,39 +535,140 @@ body {
 }
 
 /* ================================
-   SMALL MOBILE (480px and below)
+   MOBILE ZOOM FIX - Add to bottom of parents.css
 ================================ */
-@media (max-width: 480px){
-  .page-section {
-    padding: 20px 16px;
+
+/* More compact mobile layout */
+@media (max-width: 768px) {
+  .page-section{ 
+    padding: 20px 16px; /* Reduced from 30px */
   }
   
   .page-title{ 
-    font-size: 2.2rem; 
+    font-size: 2.4rem; /* Reduced from 3rem */
+    line-height: 1;
+    margin-bottom: 8px;
   }
   
   .page-title-line2 {
-    font-size: 2rem;
+    font-size: 2.2rem; /* Reduced from 2.8rem */
   }
   
-  .cta-title{ 
-    font-size: 1.5rem; 
+  .page-subtitle {
+    font-size: 13px; /* Reduced from 14px */
+    margin-bottom: 12px;
+  }
+  
+  .game-preview-section{ 
+    padding: 20px 16px; /* Reduced from 30px */
+    margin: 16px 12px; /* Reduced margins */
+  }
+  
+  .feature-showcase {
+    margin-bottom: 24px; /* Reduced from 30px */
+    gap: 20px;
   }
   
   .phone-mockup{ 
-    width: 180px; 
-    height: 380px; 
+    width: 160px; /* Smaller phones */
+    height: 320px; 
+    padding: 12px;
   }
   
   .feature-title{ 
-    font-size: 1.4rem; 
+    font-size: 1.3rem; /* Reduced */
+    margin-bottom: 8px;
   }
   
   .feature-description{ 
-    font-size: 0.95rem; 
+    font-size: 0.9rem; /* Reduced */
+    margin-bottom: 12px;
   }
   
   .feature-list li {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Reduced */
+    padding: 3px 0;
+  }
+  
+  .cta-section {
+    margin: 16px 12px; /* Reduced margins */
+    padding: 20px 16px; /* Reduced padding */
+  }
+  
+  .cta-title {
+    font-size: 1.6rem; /* Reduced from 1.8rem */
+    margin-bottom: 12px;
+  }
+  
+  .cta-description {
+    font-size: 0.95rem; /* Reduced from 1rem */
+    margin-bottom: 16px;
+  }
+  
+  .cta-button {
+    padding: 14px 28px; /* Reduced padding */
+    font-size: 0.85rem;
+  }
+  
+  .cards-section,
+  .faq-section { 
+    padding: 18px 14px; /* Reduced padding */
+    margin: 16px 12px; /* Reduced margins */
+  }
+  
+  .card-title,
+  .faq-title {
+    font-size: 1.4rem; /* Reduced from 1.6rem */
+    margin-bottom: 14px;
+  }
+  
+  .faq-question {
+    padding: 10px 12px 10px 6px; /* Reduced padding */
+    font-size: 0.95rem;
+  }
+  
+  .faq-answer {
+    padding: 6px 6px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Even more compact for small phones */
+@media (max-width: 480px) {
+  .page-title{ 
+    font-size: 2rem; /* Even smaller */
+  }
+  
+  .page-title-line2 {
+    font-size: 1.8rem;
+  }
+  
+  .page-section {
+    padding: 16px 12px;
+  }
+  
+  .game-preview-section,
+  .cards-section,
+  .faq-section,
+  .cta-section {
+    margin: 12px 8px;
+    padding: 16px 12px;
+  }
+  
+  .phone-mockup{ 
+    width: 140px; 
+    height: 280px; 
+  }
+  
+  .feature-title{ 
+    font-size: 1.1rem;
+  }
+  
+  .feature-description{ 
+    font-size: 0.8rem;
+  }
+  
+  .cta-title{ 
+    font-size: 1.4rem;
   }
 }
