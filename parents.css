@@ -145,7 +145,7 @@ body {
 }
 
 .feature-description{
-  font-size:1.03rem;
+  font-size:1rem;
   color:#55657a;
   line-height:1.6;
   margin:0 0 14px 0;
@@ -206,7 +206,7 @@ body {
 
 /* --- Feature 3 --- */
 .feature-phone3 .phone-mockup{
-  transform: perspective(1000px) rotateY(0deg) translateY(-40px);
+  transform: perspective(1000px) rotateY(0deg) translateY(-50px);
 }
 .feature-phone3 .feature-title{ color:#1D4ED8; }
 .feature-phone3 .feature-content {
