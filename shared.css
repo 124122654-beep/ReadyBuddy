@@ -17,7 +17,12 @@
 }
 
 /* Base layout */
-body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
+body{ 
+  margin:0; 
+  font-family: 'Arial', ui-sans-serif, system-ui;
+  overflow-x: hidden;
+  width: 100%;
+}
 
 .top-bar{
   background: var(--bar-bg);
@@ -69,7 +74,7 @@ body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
 .nav-junior:hover { background:linear-gradient(135deg,var(--hover-junior-1), var(--hover-junior-2));  color:#fff; }
 .nav-teen:hover   { background:linear-gradient(135deg,var(--hover-teen-1),   var(--hover-teen-2));    color:#fff; }
 
-/* Page structure bits you’re already using */
+/* Page structure bits you're already using */
 .page-section{ padding:24px; }
 
 /* Accessibility: visible focus */
@@ -96,7 +101,7 @@ body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
   margin-bottom:0;
   animation:fadeInUp .8s ease .4s both;
   margin-top: 2px;
-  }
+}
 
 .page-title-line1{
   color: var(--title-line1, #000000); /* fallback black */
@@ -115,9 +120,9 @@ body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
   margin-top:16px;
 }
 
-
 /* ================================
-   MOBILE NAVIGATION FIX
+   MOBILE NAVIGATION RESPONSIVE
+   (ONLY THE NAV BAR - NOT PAGE CONTENT)
 ================================ */
 
 @media (max-width: 768px) {
@@ -165,6 +170,26 @@ body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
     width: 100%; /* Fill grid cell */
     min-width: 90px; /* Minimum width for consistency */
   }
+  
+  /* Mobile responsive page titles */
+  .page-title{ 
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  
+  .page-title-line2 {
+    font-size: 2.2rem;
+  }
+  
+  .page-subtitle {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  
+  .page-section{ 
+    padding: 20px 16px;
+  }
 }
 
 /* Smaller phones - keep same alignment but smaller */
@@ -188,5 +213,17 @@ body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
     padding: 8px 12px;
     font-size: 0.8rem;
     min-width: 80px;
+  }
+  
+  .page-title{ 
+    font-size: 2rem;
+  }
+  
+  .page-title-line2 {
+    font-size: 1.8rem;
+  }
+  
+  .page-section {
+    padding: 16px 12px;
   }
 }
