@@ -1,0 +1,102 @@
+body {
+  background-color: #fafafa;
+}
+
+/* ================================
+   Junior page theme (navbar colors)
+   ================================ */
+:root{
+  --bar-bg:#f73030;        /* navbar background */
+  --bar-border: #1D4ED8;    /* bottom border */
+
+  --brand-ready:#ffc5c5;   /* "READY" text */
+  --brand-buddy:#ffffff;   /* "BUDDY" text */
+  --cross-color:#1D4ED8;   /* cross icon */
+
+  --link-bg:#ffffff;
+  --link-text:#222222;
+
+  --title-line1:#f73030;  
+
+  /* hover gradient for Junior pill */
+  --hover-junior-1:#FF8E6E; 
+  --hover-junior-2:#EF4444;
+
+  /* optional active pill color */
+  --active-pill-bg:#EF4444;
+}
+
+.section {
+  margin-bottom:80px;
+}
+
+.section-subtitle {
+  font-size:1.5rem;
+  font-weight:400;
+  color:rgba(255,255,255,0.9);
+  margin-bottom:40px;
+  text-align:center;
+}
+
+/* Chatbot container */
+.chatbot-container {
+  max-width:800px;
+  width:90%;
+  height:600px;
+  margin:40px auto;
+  border:2px solid #333;
+  border-radius:10px;
+  padding:20px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.1);
+  background-color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+
+.chatbot-header {
+  background-color:#f5f5f5;
+  margin:-20px -20px 20px -20px;
+  padding:15px 20px;
+  border-bottom:1px solid #ddd;
+  font-weight:700;
+  text-align:center;
+  color:#333;
+}
+
+.chatbot-content {
+  height:calc(100% - 60px);
+  width:100%;
+  position:relative;
+}
+
+/* Placeholder text */
+.chatbot-placeholder {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  color:#999;
+  text-align:center;
+  font-size:16px;
+}
+
+/* ================================
+   Responsive tweaks
+   ================================ */
+@media (max-width:768px){
+  .page-section{ padding:40px 20px; }
+  .page-title{ font-size:3.5rem; }
+  .section-subtitle{ font-size:1.2rem; }
+  .chatbot-container{
+    width:95%; height:500px; margin:20px auto; padding:15px;
+  }
+  .chatbot-header{
+    margin:-15px -15px 15px -15px;
+    padding:12px 15px;
+    font-size:14px;
+  }
+}
+
+@media (max-width:480px){
+  .page-title{ font-size:2.8rem; }
+}
