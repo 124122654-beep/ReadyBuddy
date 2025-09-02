@@ -116,9 +116,74 @@ body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
 }
 
 
-/* Mobile */
-@media (max-width:768px){
-  .top-bar{ flex-direction:column; gap:12px; padding:16px; }
-  .header{ font-size:2.2rem; }
-  .nav-link{ padding:10px 16px; font-size:1rem; }
+/* ================================
+   MOBILE NAVIGATION FIX
+   Add this to your shared.css, replacing the existing mobile section
+================================ */
+
+/* Better Mobile Navigation */
+@media (max-width: 768px) {
+  .top-bar { 
+    flex-direction: column; 
+    gap: 8px; 
+    padding: 12px 16px;
+    align-items: center;
+  }
+  
+  /* Header first on mobile */
+  .header { 
+    font-size: 2rem;
+    order: -1;
+    margin-bottom: 8px;
+  }
+  
+  .cross-emoji {
+    font-size: 1.8rem;
+    margin: 0 4px;
+  }
+  
+  /* Navigation menus stack and wrap */
+  .nav-menu-left, 
+  .nav-menu-right {
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  /* Bigger touch-friendly nav pills */
+  .nav-link { 
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    margin: 3px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+}
+
+/* Even smaller phones */
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 8px 12px;
+  }
+  
+  .header {
+    font-size: 1.6rem;
+  }
+  
+  .nav-link {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    margin: 2px;
+  }
+  
+  /* Stack navigation in single column for very small screens */
+  .nav-menu-left,
+  .nav-menu-right {
+    width: 100%;
+    gap: 4px;
+  }
 }
