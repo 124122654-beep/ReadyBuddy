@@ -118,23 +118,25 @@ body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
 
 /* ================================
    MOBILE NAVIGATION FIX
-   Add this to your shared.css, replacing the existing mobile section
+================================ */
+/* ================================
+   ALIGNED MOBILE NAVIGATION FIX
+   Replace the mobile section in shared.css with this
 ================================ */
 
-/* Better Mobile Navigation */
 @media (max-width: 768px) {
   .top-bar { 
     flex-direction: column; 
-    gap: 8px; 
+    gap: 12px; 
     padding: 12px 16px;
     align-items: center;
   }
   
-  /* Header first on mobile */
+  /* Header in the middle */
   .header { 
     font-size: 2rem;
-    order: -1;
-    margin-bottom: 8px;
+    order: 0; /* Keep header in middle */
+    margin: 0;
   }
   
   .cross-emoji {
@@ -142,48 +144,53 @@ body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
     margin: 0 4px;
   }
   
-  /* Navigation menus stack and wrap */
+  /* Both navigation menus use same grid layout */
   .nav-menu-left, 
   .nav-menu-right {
     margin: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 8px;
+    width: 100%;
+    max-width: 350px; /* Constrain total width */
+    justify-items: center;
   }
   
-  /* Bigger touch-friendly nav pills */
+  /* Navigation pills - equal size and aligned */
   .nav-link { 
-    padding: 10px 18px;
+    padding: 10px 16px;
     font-size: 0.9rem;
-    margin: 3px;
+    margin: 0; /* Remove individual margins */
     min-height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    width: 100%; /* Fill grid cell */
+    min-width: 90px; /* Minimum width for consistency */
   }
 }
 
-/* Even smaller phones */
+/* Smaller phones - keep same alignment but smaller */
 @media (max-width: 480px) {
   .top-bar {
     padding: 8px 12px;
+    gap: 10px;
   }
   
   .header {
     font-size: 1.6rem;
   }
   
-  .nav-link {
-    padding: 8px 14px;
-    font-size: 0.8rem;
-    margin: 2px;
-  }
-  
-  /* Stack navigation in single column for very small screens */
   .nav-menu-left,
   .nav-menu-right {
-    width: 100%;
-    gap: 4px;
+    max-width: 320px;
+    gap: 6px;
+  }
+  
+  .nav-link {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    min-width: 80px;
   }
 }
