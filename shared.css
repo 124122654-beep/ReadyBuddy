@@ -119,10 +119,6 @@ body{ margin:0; font-family: 'Arial', ui-sans-serif, system-ui; }
 /* ================================
    MOBILE NAVIGATION FIX
 ================================ */
-/* ================================
-   ALIGNED MOBILE NAVIGATION FIX
-   Replace the mobile section in shared.css with this
-================================ */
 
 @media (max-width: 768px) {
   .top-bar { 
