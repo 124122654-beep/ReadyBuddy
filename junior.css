@@ -83,22 +83,61 @@ body {
 }
 
 /* ================================
-   Responsive tweaks
-   ================================ */
-@media (max-width:768px){
-  .page-section{ padding:40px 20px; }
-  .page-title{ font-size:3.5rem; }
-  .section-subtitle{ font-size:1.2rem; }
-  .chatbot-container{
-    width:95%; height:500px; margin:20px auto; padding:15px;
+   MOBILE RESPONSIVE 
+================================ */
+
+@media (max-width: 768px){
+  .page-section{ 
+    padding: 30px 20px; 
   }
-  .chatbot-header{
-    margin:-15px -15px 15px -15px;
-    padding:12px 15px;
-    font-size:14px;
+  
+  .page-title{ 
+    font-size: 3rem; 
+  }
+  
+  .page-title-line2 {
+    font-size: 2.8rem;
+  }
+  
+  .page-subtitle {
+    font-size: 14px;
+    margin-bottom: 8px;
   }
 }
 
-@media (max-width:480px){
-  .page-title{ font-size:2.8rem; }
+/* More compact mobile layout */
+@media (max-width: 768px) {
+  .page-section{ 
+    padding: 20px 16px; /* Reduced from 30px */
+  }
+  
+  .page-title{ 
+    font-size: 2.4rem; /* Reduced from 3rem */
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  
+  .page-title-line2 {
+    font-size: 2.2rem; /* Reduced from 2.8rem */
+  }
+  
+  .page-subtitle {
+    font-size: 13px; /* Reduced from 14px */
+    margin-bottom: 12px;
+  }
+}
+
+/* Even more compact for small phones */
+@media (max-width: 480px) {
+  .page-title{ 
+    font-size: 2rem; /* Even smaller */
+  }
+  
+  .page-title-line2 {
+    font-size: 1.8rem;
+  }
+  
+  .page-section {
+    padding: 16px 12px;
+  }
 }
