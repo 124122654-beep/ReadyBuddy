@@ -1,4 +1,3 @@
-
 body {
   background-color: #fafafa;
 }
@@ -9,20 +8,15 @@ body {
 :root{
   --bar-bg:#f73030;        /* navbar background */
   --bar-border: #1D4ED8;    /* bottom border */
-
   --brand-ready:#ffc5c5;   /* "READY" text */
   --brand-buddy:#ffffff;   /* "BUDDY" text */
   --cross-color:#1D4ED8;   /* cross icon */
-
   --link-bg:#ffffff;
   --link-text:#222222;
-
   --title-line1:#f73030;  
-
   /* hover gradient for Junior pill */
   --hover-junior-1:#FF8E6E; 
   --hover-junior-2:#EF4444;
-
   /* optional active pill color */
   --active-pill-bg:#EF4444;
 }
@@ -39,11 +33,12 @@ body {
   text-align:center;
 }
 
-/* Chatbot container */
+/* Chatbot container - Updated for proper iframe display */
 .chatbot-container {
   max-width:800px;
   width:60%;
-  height:600px;
+  height:auto;
+  min-height:600px;
   margin:40px auto;
   border:2px solid #f73030;
   border-radius:10px;
@@ -51,7 +46,6 @@ body {
   box-shadow:0 4px 8px rgba(0,0,0,0.1);
   background-color:#fff;
   position:relative;
-  overflow:hidden;
   box-sizing: border-box;
 }
 
@@ -66,7 +60,7 @@ body {
 }
 
 .chatbot-content {
-  height:calc(100% - 60px);
+  height:auto;
   width:100%;
   position:relative;
 }
@@ -85,59 +79,20 @@ body {
 /* ================================
    MOBILE RESPONSIVE 
 ================================ */
-
-@media (max-width: 768px){
-  .page-section{ 
-    padding: 30px 20px; 
-  }
-  
-  .page-title{ 
-    font-size: 3rem; 
-  }
-  
-  .page-title-line2 {
-    font-size: 2.8rem;
-  }
-  
-  .page-subtitle {
-    font-size: 14px;
-    margin-bottom: 8px;
+  /* Mobile chatbot adjustments */
+  .chatbot-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
   }
 }
 
-/* More compact mobile layout */
-@media (max-width: 768px) {
-  .page-section{ 
-    padding: 20px 16px; /* Reduced from 30px */
-  }
-  
-  .page-title{ 
-    font-size: 2.4rem; /* Reduced from 3rem */
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  
-  .page-title-line2 {
-    font-size: 2.2rem; /* Reduced from 2.8rem */
-  }
-  
-  .page-subtitle {
-    font-size: 13px; /* Reduced from 14px */
-    margin-bottom: 12px;
-  }
-}
 
 /* Even more compact for small phones */
 @media (max-width: 480px) {
-  .page-title{ 
-    font-size: 2rem; /* Even smaller */
-  }
-  
-  .page-title-line2 {
-    font-size: 1.8rem;
-  }
-  
-  .page-section {
-    padding: 16px 12px;
+
+  .chatbot-container {
+    width: 95%;
+    padding: 10px;
   }
 }
