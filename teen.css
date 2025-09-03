@@ -71,13 +71,19 @@ body {
    MOBILE RESPONSIVE 
 ================================ */
 
-@media (max-width: 768px){
-  .page-section{ 
-    padding: 30px 20px; 
+/* ADD THIS TO THE END OF YOUR JUNIOR.CSS FILE */
+
+/* Remove conflicting mobile nav styles and let shared.css handle it */
+@media (max-width: 768px) {
+  /* Remove any nav-related styles - let shared.css handle navigation */
+  
+  /* Keep only the page-specific content styles */
+  .page-section {
+    padding: 30px 20px;
   }
   
-  .page-title{ 
-    font-size: 3rem; 
+  .page-title {
+    font-size: 3rem;
   }
   
   .page-title-line2 {
@@ -88,15 +94,21 @@ body {
     font-size: 14px;
     margin-bottom: 8px;
   }
+  
+  /* Keep your chatbot and other content styles */
+  .chatbot-container {
+    margin: 20px auto;
+    padding: 15px;
+  }
 }
 
 /* More compact mobile layout */
 @media (max-width: 768px) {
-  .page-section{ 
+  .page-section {
     padding: 20px 16px; /* Reduced from 30px */
   }
   
-  .page-title{ 
+  .page-title {
     font-size: 2.4rem; /* Reduced from 3rem */
     line-height: 1;
     margin-bottom: 8px;
@@ -114,7 +126,7 @@ body {
 
 /* Even more compact for small phones */
 @media (max-width: 480px) {
-  .page-title{ 
+  .page-title {
     font-size: 2rem; /* Even smaller */
   }
   
