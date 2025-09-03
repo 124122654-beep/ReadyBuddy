@@ -42,8 +42,8 @@ body {
 /* Chatbot container */
 .chatbot-container {
   max-width:800px;
-  width:90%;
-  height:700px;
+  width:60%;
+  height:600px;
   margin:40px auto;
   border:2px solid #f73030;
   border-radius:10px;
