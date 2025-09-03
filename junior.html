@@ -13,7 +13,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
   <header class="top-bar">
@@ -48,7 +48,11 @@
         Ready Buddy Assistant
       </div>
       <div class="chatbot-content">
-        <div class="chatbot-placeholder">Chatbot will be embedded here</div>
+        <!-- Embed mounted here -->
+        <div id="chatbot-embed" class="chatbot-embed" style="min-height: 560px;">
+          <script src="https://cdn.jotfor.ms/agent/embedjs/0199110ff9567d858dccbe9cad2924d12bd2/embed.js"></script>
+          <noscript>Please enable JavaScript to use the Ready Buddy assistant.</noscript>
+        </div>
       </div>
     </section>
   </main>
