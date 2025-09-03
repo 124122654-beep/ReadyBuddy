@@ -135,7 +135,7 @@ body{
   
   /* Header in the middle */
   .header { 
-    font-size: 2rem;
+    font-size: 1.9rem;
     order: 0; /* Keep header in middle */
     margin: 0;
   }
