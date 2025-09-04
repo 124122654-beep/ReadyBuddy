@@ -29,7 +29,7 @@
    ================================ */
 .chatbot-container {
     width: 80%;
-    margin: 0px auto 40px auto; /* Removed top margin completely */
+    margin: -20px auto 40px auto; /* Removed top margin completely */
     padding: 20px;
 }
 
