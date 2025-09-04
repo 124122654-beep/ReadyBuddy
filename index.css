@@ -143,20 +143,3 @@ body {
 .footer-links a{ color:black; text-decoration:none; transition:all .3s; }
 .footer-links a:hover{ color:red; transform:translateY(-2px); }
 
-/* ================================
-   Responsive (page elements only)
-   ================================ */
-@media (max-width:768px){
-  .welcome-section{ padding:30px 20px; }
-  .card-row{ flex-direction:column; align-items:center; gap:20px; }
-  .info-card{ width:100%; max-width:300px; }
-  .welcome-title{ font-size:2.5rem; }
-}
-
-@media (max-width:480px){
-  .welcome-title{ font-size:2rem; }
-  .card-title{ font-size:1.3rem; }
-  .card-subtitle{ font-size:1rem; }
-  .info-card{ padding:35px 25px; }
-}
-
