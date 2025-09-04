@@ -19,10 +19,20 @@
 /* ================================
    JUNIOR PAGE OVERRIDES
    ================================ */
+body {
+    background-color: #ffffff !important;
+}
+
+.page-section {
+    background-color: #ffffff;
+}
+
 .page-subtitle {
     color: var(--page-subtitle);
     margin-bottom: 20px;
 }
+
+
 
 /* ================================
    CHATBOT COMPONENT
