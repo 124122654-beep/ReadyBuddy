@@ -451,11 +451,11 @@
 
   .feature-description {
     font-size: 0.95rem;
-    margin-bottom: 20px;
+    margin-bottom: 20p4;
   }
 
   .feature-list li {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     justify-content: flex-start;
   }
 
@@ -484,9 +484,9 @@
 
   .cta-button {
     padding: 15px 30px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     width: 100%;
-    max-width: 280px;
+    max-width: 200px;
   }
 
   /* Other Sections */
