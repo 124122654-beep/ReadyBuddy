@@ -70,7 +70,7 @@
     }
     
     .chatbot-container iframe {
-        height: 500px !important;
+          height: 85vh !important;
     }
 }
 
@@ -94,6 +94,6 @@
     }
     
     .chatbot-container iframe {
-        height: 300px !important;
+        height: 90vh !important;
     }
 }
