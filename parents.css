@@ -678,11 +678,20 @@
     margin-bottom: 24px;
   }
 
+  .cta-buttons { gap: 12px; }
+
   .cta-button {
-    padding: 14px 28px;
-    font-size: 0.95rem;
-    max-width: 280px;
-    min-height: 48px;
+    padding: 10px 16px;   /* less padding = shorter + narrower */
+    font-size: 0.9rem;
+    min-height: 38px;     /* was 44px */
+    max-width: 180px;     /* was 220px */
+    border-radius: 18px;
+    width: fit-content;   /* shrink to text width */
+  }
+
+  .cta-button i {
+    margin-right: 8px;
+    font-size: 1em;
   }
 
   .cards-section,
@@ -761,4 +770,14 @@
   .cta-description {
     font-size: 0.9rem;
   }
+
+  .cta-buttons { gap: 10px; }
+
+  .cta-button {
+    padding: 8px 12px;    /* even smaller */
+    font-size: 0.9rem;
+    min-height: 34px;     /* was 48px in your rules */
+    max-width: 160px;     /* cap width tighter */
+    border-width: 1.5px;  /* slimmer outline */
+    border-radius: 16px;
 }
