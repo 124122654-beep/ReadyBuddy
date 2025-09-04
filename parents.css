@@ -401,3 +401,203 @@ body {
   transform:translateY(-2px); 
   box-shadow:0 8px 20px rgba(59,130,246,0.3); 
 }
+
+/* ================================
+   MOBILE RESPONSIVE STYLES
+================================ */
+
+/* Tablet and smaller desktop */
+@media (max-width: 768px) {
+  /* Game Preview Section */
+  .game-preview-section {
+    margin: 20px 16px;
+    padding: 20px;
+    border-radius: 20px;
+    border-width: 4px;
+  }
+
+  /* Features Grid - Stack vertically on mobile */
+  .feature-showcase {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  /* Remove reverse direction on mobile */
+  .feature-showcase.reverse {
+    direction: ltr;
+  }
+
+  /* Phone mockup adjustments */
+  .phone-mockup {
+    width: 200px;
+    height: 400px;
+    transform: none !important; /* Remove all desktop transforms */
+    margin: 0 auto;
+  }
+
+  /* Reset all feature-specific transforms for mobile */
+  .feature-phone1 .phone-mockup,
+  .feature-phone2 .phone-mockup,
+  .feature-phone3 .phone-mockup {
+    transform: none !important;
+  }
+
+  /* Reset feature content margins */
+  .feature-phone1 .feature-content,
+  .feature-phone2 .feature-content,
+  .feature-phone3 .feature-content {
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* Feature content adjustments */
+  .feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .feature-description {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .feature-list li {
+    font-size: 0.95rem;
+    justify-content: flex-start;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    margin: 20px 16px;
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+  .cta-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .cta-description {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Other Sections */
+  .cards-section,
+  .faq-section {
+    margin: 20px 16px;
+    padding: 25px 20px;
+    border-radius: 20px;
+    border-width: 4px;
+  }
+
+  .card .card-title,
+  .faq-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 12px 15px 12px 5px;
+  }
+
+  .faq-answer {
+    padding: 5px 5px 12px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  /* Further reduce spacing */
+  .game-preview-section {
+    margin: 15px 12px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  /* Smaller phone mockup */
+  .phone-mockup {
+    width: 160px;
+    height: 320px;
+  }
+
+  /* Typography adjustments */
+  .feature-title {
+    font-size: 1.3rem;
+  }
+
+  .feature-description {
+    font-size: 0.9rem;
+  }
+
+  .feature-list li {
+    font-size: 0.9rem;
+    padding: 4px 0;
+  }
+
+  /* CTA adjustments */
+  .cta-section {
+    margin: 15px 12px;
+    padding: 20px 16px;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-description {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* Other sections */
+  .cards-section,
+  .faq-section {
+    margin: 15px 12px;
+    padding: 20px 16px;
+  }
+
+  .card .card-title,
+  .faq-title {
+    font-size: 1.4rem;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+
+  .feedback-textarea {
+    min-height: 100px;
+    padding: 12px;
+  }
+
+  .submit-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
