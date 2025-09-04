@@ -1,24 +1,4 @@
 /* ================================
-   Base
-================================ */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  overflow-x: hidden;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body { 
-  background-color: #fafafa; 
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* ================================
    Parents page theme variables
 ================================ */
 :root{
@@ -32,9 +12,21 @@ body {
   --link-text:#111111;       /* nav pill text */
 
   --title-line1:#1D4ED8;  
+  --title-line2:#000000;     /* "SQUAD" stays black */
 
   --hover-parents-1:#1D4ED8; /* hover gradient start */
   --hover-parents-2:#3B82F6; /* hover gradient end */
+  
+  /* Parents-specific variables */
+  --page-subtitle: rgba(0, 0, 0, 0.7);
+}
+
+/* ================================
+   Parents Page Overrides
+================================ */
+.page-subtitle {
+    color: var(--page-subtitle);
+    margin-bottom: 20px;
 }
 
 /* ================================
@@ -432,7 +424,7 @@ body {
   .phone-mockup {
     width: 200px;
     height: 400px;
-    transform: none !important; /* Remove all desktop transforms */
+    transform: none !important;
     margin: 0 auto;
   }
 
@@ -525,20 +517,17 @@ body {
 
 /* Small phones */
 @media (max-width: 480px) {
-  /* Further reduce spacing */
   .game-preview-section {
     margin: 15px 12px;
     padding: 16px;
     border-radius: 16px;
   }
 
-  /* Smaller phone mockup */
   .phone-mockup {
     width: 160px;
     height: 320px;
   }
 
-  /* Typography adjustments */
   .feature-title {
     font-size: 1.3rem;
   }
@@ -552,7 +541,6 @@ body {
     padding: 4px 0;
   }
 
-  /* CTA adjustments */
   .cta-section {
     margin: 15px 12px;
     padding: 20px 16px;
@@ -571,7 +559,6 @@ body {
     font-size: 0.9rem;
   }
 
-  /* Other sections */
   .cards-section,
   .faq-section {
     margin: 15px 12px;
