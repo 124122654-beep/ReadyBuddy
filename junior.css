@@ -33,3 +33,14 @@ body {
   text-align:center;
 }
 
+.chatbot-container {
+    width: 80%;
+    margin: 20px auto 40px auto; /* Reduced top margin from 40px to 20px */
+    padding: 20px;
+}
+
+.chatbot-container iframe {
+    height: 600px;
+    width: 100%;
+}
+
