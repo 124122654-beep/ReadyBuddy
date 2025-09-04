@@ -33,8 +33,3 @@ body {
   text-align:center;
 }
 
-.page-section {
-  /* shared.css sets: padding:40px 40px; margin-top:16px; */
-  padding-top: 20px;   /* was 40px */
-  margin-top: 0;      /* was 16px */
-}
