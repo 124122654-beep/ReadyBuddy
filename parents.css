@@ -608,7 +608,17 @@
   }
 
   .cta-button {
-    max-width: 300px;
+    width: 220px;          /* same width for all */
+    padding: 8px 0;        /* less padding → shorter height */
+    font-size: 0.9rem;
+    min-height: 38px;      /* shorter than before */
+    border-radius: 16px;
+    justify-content: center;
+  }
+
+  .cta-button i {
+    margin-right: 8px;
+    font-size: 1em;
   }
 
   .cards-section,
@@ -678,20 +688,11 @@
     margin-bottom: 24px;
   }
 
-  .cta-buttons { gap: 12px; }
-
   .cta-button {
-    padding: 10px 16px;   /* less padding = shorter + narrower */
-    font-size: 0.9rem;
-    min-height: 38px;     /* was 44px */
-    max-width: 180px;     /* was 220px */
-    border-radius: 18px;
-    width: fit-content;   /* shrink to text width */
-  }
-
-  .cta-button i {
-    margin-right: 8px;
-    font-size: 1em;
+    width: 200px;          /* slightly narrower on tiny screens */
+    padding: 6px 0;
+    min-height: 34px;
+    font-size: 0.85rem;
   }
 
   .cards-section,
