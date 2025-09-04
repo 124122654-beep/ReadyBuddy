@@ -35,21 +35,6 @@ body {
 
 .page-section {
   /* shared.css sets: padding:40px 40px; margin-top:16px; */
-  padding-top: 8px;   /* was 40px */
+  padding-top: 20px;   /* was 40px */
   margin-top: 0;      /* was 16px */
 }
-
-/* Browser default margins on p/h1 also add space */
-.page-subtitle {
-  margin: 4px 0 2px;  /* remove big default p margins */
-}
-
-.page-title {
-  margin: 2px 0 0;    /* already close, make sure there’s no bottom gap */
-}
-
-/* Ensure the chatbot starts right under the title */
-.chatbot-container {
-  margin-top: 0;      /* just in case */
-}
-
