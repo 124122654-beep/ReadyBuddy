@@ -1,41 +1,35 @@
-body {
-  background-color: #fafafa;
+/* ================================
+   CSS VARIABLES - Junior Page Theme
+   ================================ */
+:root {
+    /* Override shared.css defaults for Junior page */
+    --bar-bg: #f73030;
+    --bar-border: #1D4ED8;
+    --brand-ready: #ffc5c5;
+    --brand-buddy: #ffffff;
+    --cross-color: #1D4ED8;
+    --title-line1: #f73030;
+    --title-line2: #000000; /* SQUAD stays black */
+    
+    /* Junior-specific variables */
+    --page-subtitle: rgba(0, 0, 0, 0.7);
+    --active-pill-bg: #EF4444;
 }
 
 /* ================================
-   Junior page theme (navbar colors)
+   JUNIOR PAGE OVERRIDES
    ================================ */
-:root{
-  --bar-bg:#f73030;        /* navbar background */
-  --bar-border: #1D4ED8;    /* bottom border */
-  --brand-ready:#ffc5c5;   /* "READY" text */
-  --brand-buddy:#ffffff;   /* "BUDDY" text */
-  --cross-color:#1D4ED8;   /* cross icon */
-  --link-bg:#ffffff;
-  --link-text:#222222;
-  --title-line1:#f73030;  
-  /* hover gradient for Junior pill */
-  --hover-junior-1:#FF8E6E; 
-  --hover-junior-2:#EF4444;
-  /* optional active pill color */
-  --active-pill-bg:#EF4444;
+.page-subtitle {
+    color: var(--page-subtitle);
+    margin-bottom: 20px;
 }
 
-.section {
-  margin-bottom:80px;
-}
-
-.section-subtitle {
-  font-size:1.5rem;
-  font-weight:400;
-  color:rgba(255,255,255,0.9);
-  margin-bottom:40px;
-  text-align:center;
-}
-
+/* ================================
+   CHATBOT COMPONENT
+   ================================ */
 .chatbot-container {
     width: 80%;
-    margin: 20px auto 40px auto; /* Reduced top margin from 40px to 20px */
+    margin: 20px auto 40px auto;
     padding: 20px;
 }
 
@@ -44,3 +38,62 @@ body {
     width: 100%;
 }
 
+/* ================================
+   MOBILE RESPONSIVE STYLES
+   ================================ */
+
+/* Tablet and smaller desktop */
+@media (max-width: 768px) {
+    .page-section {
+        padding: 20px 16px;
+    }
+    
+    .page-title {
+        font-size: 2.4rem;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+    
+    .page-title-line2 {
+        font-size: 2.2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+    
+    .chatbot-container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    .chatbot-container iframe {
+        height: 500px !important;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .page-section {
+        padding: 16px 12px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .page-title-line2 {
+        font-size: 1.8rem;
+    }
+    
+    .chatbot-container {
+        width: 95%;
+        padding: 10px;
+    }
+    
+    .chatbot-container iframe {
+        height: 300px !important;
+    }
+}
