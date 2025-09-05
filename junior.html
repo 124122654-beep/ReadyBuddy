@@ -56,25 +56,7 @@
         "https://eu.jotform.com")
     </script>
     <script>
-      window.addEventListener('load', function() {
-        // Force scroll to top
-        window.scrollTo(0, 0);
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-        
-        // Remove focus from iframe and enable interactions
-        const iframe = document.querySelector("iframe");
-        if (iframe) {
-          iframe.blur();
-          // Re-enable iframe interactions after a short delay
-          setTimeout(function() {
-            document.querySelector('.chatbot-container').classList.add('chatbot-loaded');
-          }, 500);
-        }
-        
-        // Focus on the body or header instead
-        document.body.focus();
-      });
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
     </script>
 
 
