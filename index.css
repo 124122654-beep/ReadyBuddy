@@ -1,139 +1,168 @@
-/*  Home page theme (navbar colors)  */
+/* VARIABLES (colors for navbar + page) */
 :root{
-  --bar-bg:#3bb371;       /* navbar background */
-  --bar-border:#e0feca;   /* underline/border */
+  --bar-bg:#3bb371;       
+  --bar-border:#e0feca;  
 
-  --brand-ready:#e0feca;  /* "READY" text */
-  --brand-buddy:#ffffff;  /* "BUDDY" text */
-  --cross-color:#ff0000;  /* cross icon */
+  --brand-ready:#e0feca; 
+  --brand-buddy:#ffffff;  
+  --cross-color:#ff0000;  
 
-  --title-line1:#3bb371;  /* title line 1 */
-  --title-line2:#000000;  /* title line 2 */
-  --page-subtitle:#000000;  /* page subtitle */
+  --title-line1:#3bb371;  
+  --title-line2:#000000;  
+  --page-subtitle:#000000;
 
-  --link-bg:#ffffff;      /* nav pill background */
-  --link-text:#111111;    /* nav pill text */
-
-  /* optional: active pill color for this page */
-  --active-pill-bg:#2e865f;
+  --link-bg:#ffffff;    
+  --link-text:#111111;   
 }
 
-/* ================================
-   Page-only styles (safe to keep)
-   ================================ */
-
+/* CARDS (Junior / Teen / Parents) */
 .card-row{
-  display:flex;
-  justify-content:center;
-  gap:32px;
-  margin-top:48px;
-  flex-wrap:wrap;
+  display:flex;                  /* arrange cards in a row */
+  justify-content:center;        
+  gap:32px;                     
+  margin-top:48px;               
+  flex-wrap:wrap;                /* allow wrapping on smaller screens */
 }
 
 .info-card{
-  border-radius:24px;
-  padding:48px 36px;
-  min-width:260px;
-  max-width:300px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  text-decoration:none;
-  box-shadow:0 8px 25px rgba(0,0,0,0.15);
-  transition:all .4s cubic-bezier(0.4,0,0.2,1);
-  position:relative;
-  overflow:hidden;
+  position:relative;             
+  display:flex;                  
+  flex-direction:column;         /* put title + subtitle vertically */
+  align-items:center;            
+  min-width:260px;              
+  max-width:300px;              
+  padding:48px 36px;             
+  border-radius:24px;            
+  text-decoration:none;          /* remove underline on links */
+
+  box-shadow:0 8px 25px rgba(0,0,0,0.15); /* soft shadow */
+  transition:transform .4s cubic-bezier(0.4,0,0.2,1), /* smooth size/lift */
+             box-shadow .4s cubic-bezier(0.4,0,0.2,1);/* smooth shadow change */
 }
 
-/* shimmer base (fix for hover::before) */
+/* shimmer base (light sweep across card) */
 .info-card::before{
-  content:"";
+  content:"";                    
   position:absolute;
-  inset:0;
-  left:-100%;
-  background:rgba(255,255,255,0.2);
+  inset:0;                       /* cover whole card */
+  left:-100%;                    /* start shimmer off-screen left */
+  background:rgba(255,255,255,0.2); /* semi-transparent white */
+  transition:left .6s ease;      /* slide across smoothly */
 }
-.info-card:hover::before{ left:100%; }
+.info-card:hover::before{ left:100%; } /* move shimmer to the right side */
 
+/* arrow appears on hover */
 .info-card::after{
-  content:'→';
+  content:'→';                   /* arrow symbol */
   position:absolute;
-  top:20px;
-  right:20px;
-  color:rgba(255,255,255,0.7);
-  font-size:1.5rem;
-  font-weight:bold;
-  opacity:0;
-  transform:translateX(-10px);
-  transition:all .3s ease;
+  top:20px;                      /* distance from top */
+  right:20px;                    /* distance from right */
+  font-size:1.5rem;              /* arrow size */
+  font-weight:bold;              /* bold arrow */
+  color:rgba(255,255,255,0.7);   /* semi-transparent white */
+  opacity:0;                     /* invisible at start */
+  transform:translateX(-10px);   /* shifted left a little */
+  transition:opacity .3s ease,   /* fade smoothly */
+             transform .3s ease; /* slide smoothly */
 }
 .info-card:hover::after{
-  opacity:1;
-  transform:translateX(0);
+  opacity:1;                     /* arrow fades in */
+  transform:translateX(0);       /* arrow slides into place */
 }
 
+/* different background colors for each card */
 .card-junior{  background:linear-gradient(135deg,#FF6363,#EF4444); }
 .card-teen{    background:linear-gradient(135deg,#F36416,#EA580C); }
 .card-parents{ background:linear-gradient(135deg,#1D4ED8,#3B82F6); }
 
+/* hover effect: lift + zoom + stronger shadow */
 .info-card:hover{
-  transform:translateY(-12px) scale(1.05);
-  box-shadow:0 20px 40px rgba(0,0,0,0.25);
+  transform: translateY(-12px)   /* lift card up slightly */
+             scale(1.05);        /* make card 5% bigger */
+  box-shadow:0 20px 40px rgba(0,0,0,0.25); /* deeper shadow */
 }
-.card-junior:hover{  box-shadow:0 20px 40px rgba(255,99,99,0.4); }
-.card-teen:hover{    box-shadow:0 20px 40px rgba(243,100,22,0.4); }
-.card-parents:hover{ box-shadow:0 20px 40px rgba(29,78,216,0.4); }
+.card-junior:hover{  box-shadow:0 20px 40px rgba(255,99,99,0.4); } /* red glow */
+.card-teen:hover{    box-shadow:0 20px 40px rgba(243,100,22,0.4); }/* orange glow */
+.card-parents:hover{ box-shadow:0 20px 40px rgba(29,78,216,0.4); } /* blue glow */
 
+/* card text */
 .card-title{
-  font-size:1.5rem;
-  color:#fff;
-  margin:0 0 12px 0;
+  margin:0 0 12px 0;             /* bottom spacing */
   text-align:center;
-  font-weight:bold;
-  position:relative;
+  font-size:1.5rem;              /* big text */
+  font-weight:bold;              /* bold */
+  color:#fff;                    /* white */
 }
 .card-subtitle{
-  font-size:1.1rem;
-  color:rgba(255,255,255,0.9);
   margin:0;
   text-align:center;
-  font-weight:500;
-  font-style:italic
+  font-size:1.1rem;              /* slightly smaller */
+  font-weight:500;               /* medium weight */
+  font-style:italic;             /* italic for style */
+  color:rgba(255,255,255,0.9);   /* almost white */
 }
 
-/* Footer */
+/* ================================
+   Footer
+================================ */
 .footer{
-  background:#e0feca;
-  padding:40px 40px 40px;
-  margin-top:100px;
-  border-radius:30px 30px 0 0;
+  background:#e0feca;            /* greenish background */
+  padding:40px;                  /* inside spacing */
+  margin-top:100px;              /* space above footer */
+  border-radius:30px 30px 0 0;   /* rounded top corners */
 }
+
 .footer-content{
-  max-width:1200px; margin:0 auto;
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:40px; margin-bottom:40px;
+  max-width:1200px;              /* limit width */
+  margin:0 auto 40px auto;       /* center + space bottom */
+  display:grid;                  /* grid layout */
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); /* responsive columns */
+  gap:40px;                      /* space between columns */
 }
-.footer-column{ color:black; }
+
+.footer-column{ color:#000; }     /* black text inside */
+
 .footer-column h3{
-  font-size:18px; font-weight:700; margin-bottom:20px; color:#3bb371; position:relative;
+  margin:0 0 20px 0;             /* space below */
+  font-size:18px;                /* medium size */
+  font-weight:700;               /* bold */
+  color:#3bb371;                 /* green color */
+  position:relative;
 }
 .footer-column h3::after{
-  content:''; position:absolute; bottom:-5px; left:0; width:30px; height:3px; background:#3bb371; border-radius:2px;
+  content:'';                    
+  position:absolute;
+  bottom:-5px; left:0;           /* little line under title */
+  width:30px; height:3px;
+  background:#3bb371;            /* same green as text */
+  border-radius:2px;
 }
-.footer-column ul{ list-style:none; padding:0; margin:0; }
-.footer-column li{ margin-bottom:12px; }
+
+.footer-column ul{ list-style:none; padding:0; margin:0; } /* no bullets */
+.footer-column li{ margin-bottom:12px; } /* space between items */
 .footer-column a{
-  color:black; text-decoration:none; font-size:14px; transition:all .3s; position:relative;
+  color:#000;                    /* black links */
+  text-decoration:none;          /* no underline */
+  font-size:14px;                /* small */
+  transition:color .3s, transform .3s; /* smooth hover */
 }
-.footer-column a:hover{ color:red; transform:translateX(5px); }
+.footer-column a:hover{
+  color:red;                     /* red on hover */
+  transform:translateX(5px);     /* slide right a bit */
+}
 
 .footer-bottom{
-  border-top:1px solid rgba(0,0,0,0.1);
-  padding-top:20px; text-align:center; color:black; font-size:12px;
+  border-top:1px solid rgba(0,0,0,0.1); /* faint top border */
+  padding-top:20px;              /* space above text */
+  text-align:center;
+  color:#000;                    /* black text */
+  font-size:12px;                /* tiny text */
 }
-.footer-links{
-  display:flex; justify-content:center; gap:20px; flex-wrap:wrap;
-}
-.footer-links a{ color:black; text-decoration:none; transition:all .3s; }
-.footer-links a:hover{ color:red; transform:translateY(-2px); }
 
+.footer-links{
+  display:flex;                  /* align links in row */
+  justify-content:center;        /* center them */
+  gap:20px;                      /* space between links */
+  flex-wrap:wrap;                /* wrap on small screens */
+}
+.footer-links
