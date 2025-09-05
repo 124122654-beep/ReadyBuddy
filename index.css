@@ -34,22 +34,11 @@
   padding:48px 36px;             
   border-radius:24px;            
   text-decoration:none;          /* remove underline on links */
-
   box-shadow:0 8px 25px rgba(0,0,0,0.15); /* soft shadow */
   transition:transform .4s cubic-bezier(0.4,0,0.2,1), /* smooth size/lift */
              box-shadow .4s cubic-bezier(0.4,0,0.2,1);/* smooth shadow change */
 }
 
-/* shimmer base (light sweep across card) */
-.info-card::before{
-  content:"";                    
-  position:absolute;
-  inset:0;                       /* cover whole card */
-  left:-100%;                    /* start shimmer off-screen left */
-  background:rgba(255,255,255,0.2); /* semi-transparent white */
-  transition:left .6s ease;      /* slide across smoothly */
-}
-.info-card:hover::before{ left:100%; } /* move shimmer to the right side */
 
 /* arrow appears on hover */
 .info-card::after{
