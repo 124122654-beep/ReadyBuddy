@@ -17,6 +17,20 @@
   --link-text:#111111;    /* nav pill text */
 }
 
+body {
+    background-color: #fafafa !important;
+}
+
+.page-section {
+    background-color: #fafafa;
+}
+
+.page-subtitle {
+    color: var(--page-subtitle);
+    margin-bottom: 20px;
+}
+
+
         .story-section {
             padding: 80px 40px;
             background: white;
