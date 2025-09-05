@@ -1,6 +1,4 @@
-/* ================================
-   Home page theme (navbar colors)
-   ================================ */
+/*  Home page theme (navbar colors)  */
 :root{
   --bar-bg:#3bb371;       /* navbar background */
   --bar-border:#e0feca;   /* underline/border */
