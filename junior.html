@@ -56,13 +56,19 @@
         "https://eu.jotform.com")
     </script>
     <script>
-      window.onload = function() {
-        window.scrollTo(0, 0); // Always start at the top
-        const iframe = document.querySelector("iframe");
-        if (iframe) {
-          iframe.blur();
-        }
-      };
+      document.addEventListener('DOMContentLoaded', function() {
+          setTimeout(function() {
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+          }, 0);
+        });
+        
+        window.addEventListener('load', function() {
+          setTimeout(function() {
+            window.scrollTo(0, 0);
+            document.querySelector("iframe")?.blur();
+          }, 100);
+        });
     </script>
 
 
