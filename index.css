@@ -88,34 +88,31 @@
 .card-title{
   margin:0 0 12px 0;             /* bottom spacing */
   text-align:center;
-  font-size:1.5rem;              /* big text */
-  font-weight:bold;              /* bold */
-  color:#fff;                    /* white */
+  font-size:1.5rem;              
+  font-weight:bold;              
+  color:#fff;                    
 }
 .card-subtitle{
   margin:0;
   text-align:center;
-  font-size:1.1rem;              /* slightly smaller */
-  font-weight:500;               /* medium weight */
-  font-style:italic;             /* italic for style */
-  color:rgba(255,255,255,0.9);   /* almost white */
+  font-size:1.1rem;              
+  font-weight:500;              
+  font-style:italic;             
+  color:rgba(255,255,255,0.9);  
 }
 
-/* ================================
-   Footer
-================================ */
+/* FOOTER */
 .footer{
-  background:#e0feca;            /* greenish background */
-  padding:40px;                  /* inside spacing */
-  margin-top:100px;              /* space above footer */
-  border-radius:30px 30px 0 0;   /* rounded top corners */
+  background:#e0feca;            
+  padding:40px;                 
+  margin-top:100px;              
+  border-radius:30px 30px 0 0;   
 }
 
 .footer-content{
   max-width:1200px;              /* limit width */
   margin:0 auto 40px auto;       /* center + space bottom */
   display:grid;                  /* grid layout */
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); /* responsive columns */
   gap:40px;                      /* space between columns */
 }
 
