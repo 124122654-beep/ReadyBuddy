@@ -1,19 +1,16 @@
 /* CSS VARIABLES - Teen Page Theme */
 :root{
-  --bar-bg:#ff7300;          /* navbar background */
-  --bar-border: #f73030;    /* bottom border */
+  --bar-bg:#ff7300;          
+  --bar-border: #f73030;  
 
-  --brand-ready:#fdc396;     /* "READY" text color */
-  --brand-buddy:#ffffff;     /* "BUDDY" text color */
-  --cross-color:#f73030;     /* cross icon color */
+  --brand-ready:#fdc396;    
+  --brand-buddy:#ffffff;    
+  --cross-color:#f73030;   
 
-  --link-bg:#ffffff;         /* nav pill background */
-  --link-text:#222222;       /* nav pill text */
+  --link-bg:#ffffff;        
+  --link-text:#222222;      
 
   --title-line1:#ff7300;
-
-  --hover-teen-1:#f4a261;    /* optional hover gradient start */
-  --hover-teen-2:#ea7a2b;    /* optional hover gradient end */
 }
 
 /* Teen PAGE OVERRIDES */
