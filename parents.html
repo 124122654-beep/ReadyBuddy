@@ -5,19 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Parents — Ready Buddy</title>
 
-  <!-- Font first -->
-  <link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet">
-
-  <!-- Shared + page CSS -->
+  <!-- STYLESHEETS -->
   <link rel="stylesheet" href="shared.css" />
   <link rel="stylesheet" href="parents.css" />
-
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}</style>
 </head>
 <body>
+  <!-- HEADER / NAVIGATION BAR -->
   <header class="top-bar">
     <nav class="nav-menu-left" aria-label="Section links">
       <a href="junior.html"  class="nav-link nav-junior">Junior</a>
@@ -39,7 +34,7 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- PARENTS MAIN CONTENT -->
     <section class="page-section" aria-labelledby="parents-title">
       <p class="page-subtitle">Guidance and support for every step</p>
       <h1 id="parents-title" class="page-title">
@@ -48,11 +43,11 @@
       </h1>
     </section>
 
-    <!-- How it works -->
+    <!-- GAME PREVIEW -->
     <section class="game-preview-section" aria-label="How Ready Buddy works">
       <div class="features-grid">
 
-        <!-- Feature 1 -->
+        <!-- Feature 1 : Age group selection (phone + content) -->
         <div class="feature-showcase feature-phone1">
           <div class="phone-container">
             <div class="phone-mockup">
@@ -65,7 +60,6 @@
               </div>
             </div>
           </div>
-
           <div class="feature-content feature-text1">
             <h3 class="feature-title">Pick the Right Squad</h3>
             <p class="feature-description">
@@ -80,7 +74,7 @@
           </div>
         </div>
 
-        <!-- Feature 2 -->
+        <!-- Feature 2 : Theme selection (phone + content) -->
         <div class="feature-showcase reverse feature-phone2">
           <div class="phone-container">
             <div class="phone-mockup">
@@ -93,7 +87,6 @@
               </div>
             </div>
           </div>
-
           <div class="feature-content feature-text2">
             <h3 class="feature-title">Choose Your Adventure</h3>
             <p class="feature-description">
@@ -109,7 +102,7 @@
           </div>
         </div>
 
-        <!-- Feature 3 -->
+        <!-- Feature 3 : Progress and quiz  selection (phone + content) -->
         <div class="feature-showcase feature-phone3">
           <div class="phone-container">
             <div class="phone-mockup">
@@ -122,7 +115,6 @@
               </div>
             </div>
           </div>
-
           <div class="feature-content">
             <h3 class="feature-title">Final Quiz & Checkmarks</h3>
             <p class="feature-description">Play the games, check them off when you’re done, and unlock the final quiz to prove your survival skills.</p>
@@ -135,14 +127,14 @@
         </div>
       </div>
 
-      <!-- Call to action -->
-      <div class="cta-section">
-        <div class="cta-content">
-          <h3 class="cta-title">Ready to Start the Adventure?</h3>
-          <p class="cta-description">
-            Join families using Ready Buddy to teach essential survival skills through fun, interactive games
+      <!-- ACTION SECTION -->
+      <div class="action-section">
+        <div class="action-content">
+          <h3 class="action-title">Ready to Start the Adventure?</h3>
+          <p class="action-description">
+            Join families using Ready Buddy to teach essential survival skills through fun, interactive games!
           </p>
-          <div class="cta-buttons">
+          <div class="action-buttons">
             <a href="#" class="cta-button primary"><i class="fa-brands fa-apple"></i> Download Now</a>
             <a href="#" class="cta-button"><i class="fa-solid fa-play"></i> Watch Demo Video</a>
           </div>
@@ -150,7 +142,7 @@
       </div>
     </section>
 
-    <!-- Feedback -->
+    <!-- FEEDBACK -->
     <section class="cards-section" aria-label="Share feedback">
       <div class="card">
         <h2 class="card-title">Share Your Ideas</h2>
@@ -217,13 +209,14 @@
 
   </main>
 
+  <!-- JAVASCRIPT SECTION -->
   <script>
-    // Accessible accordion for FAQ
+    // FAQ section functionality  
     function toggleFAQ(btn){
       const answer = document.getElementById(btn.getAttribute('aria-controls'));
       const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
-      // Close others
+      // Close all others items 
       document.querySelectorAll('.faq-question').forEach(b=>{
         if(b!==btn){ b.setAttribute('aria-expanded','false'); }
       });
@@ -234,7 +227,7 @@
         if(t!==btn.querySelector('.faq-toggle')){ t.textContent = '+'; }
       });
 
-      // Toggle current
+      // Toggle the current clicked item 
       btn.setAttribute('aria-expanded', String(!isOpen));
       answer.hidden = isOpen;
       btn.querySelector('.faq-toggle').textContent = isOpen ? '+' : '×';
