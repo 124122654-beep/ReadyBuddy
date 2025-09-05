@@ -1,10 +1,4 @@
-body {
-  background-color: #fafafa;
-}
-
-/* ================================
-   Teen page theme (navbar colors)
-   ================================ */
+/* CSS VARIABLES - Teen Page Theme */
 :root{
   --bar-bg:#ff7300;          /* navbar background */
   --bar-border: #f73030;    /* bottom border */
@@ -20,50 +14,73 @@ body {
 
   --hover-teen-1:#f4a261;    /* optional hover gradient start */
   --hover-teen-2:#ea7a2b;    /* optional hover gradient end */
-
-  /* optional: filled pill for current page */
-  --active-pill-bg:#ea580c;
 }
 
-/* Chatbot container styles */
-.chatbot-container {
-  max-width: 800px;
-  width: 90%;
-  height: 600px;
-  margin: 40px auto;
-  border: 2px solid #333;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-color: #fff;
-  position: relative;
-  overflow: hidden;
+/* Teen PAGE OVERRIDES */
+body{ background:#fafafa; }       
+
+/* CHATBOT CARD  */
+.chatbot-container{
+  width: min(90%, 800px);                /* responsive max width */
+  margin: 32px auto;                     
+  padding: 20px;                         
+  background:#fff;                       
+  border:2px solid #333;                 
+  border-radius:10px;                   
+  box-shadow:0 4px 8px rgba(0,0,0,.1);  
+
+  display:flex;                          /* column layout */
+  flex-direction:column;
+  min-height: clamp(560px, 70vh, 900px); /* flexible height */
+  overflow:hidden;                       
 }
 
-.chatbot-header {
-  background-color: #f5f5f5;
-  margin: -20px -20px 20px -20px;
-  padding: 15px 20px;
-  border-bottom: 1px solid #ddd;
-  font-weight: 700;
-  text-align: center;
-  color: #333;
+.chatbot-header{
+  background:#f5f5f5;                    
+  margin:-20px -20px 20px -20px;         /* stretch to card edges */
+  padding:15px 20px;                    
+  border-bottom:1px solid #ddd;         
+  font-weight:700;                      
+  text-align:center;                     
+  color:#333;                           
 }
 
-.chatbot-content {
-  height: calc(100% - 60px);
-  width: 100%;
-  position: relative;
+.chatbot-content{
+  flex:1;                                 /* fill remaining space */
+  width:100%;
+  position:relative;                     
 }
 
-/* Placeholder text (remove when you embed your chatbot) */
-.chatbot-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: #999;
-  text-align: center;
-  font-size: 16px;
+/* Placeholder text until chatbot is embeded */
+.chatbot-placeholder{
+  height:100%;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center;
+  font-size:16px;
+  color:#999;
 }
 
+/* MOBILE SECTION  */
+@media (max-width: 768px){
+  .chatbot-container{
+    width: min(92%, 720px);
+    padding:16px;
+    border-radius:12px;
+  }
+  .chatbot-header{
+    margin:-16px -16px 16px -16px;       
+    padding:12px 16px;
+  }
+}
+
+@media (max-width: 480px){
+  .chatbot-container{
+    width:95%;
+    padding:12px;
+    min-height: 75vh;                   
+  }
+  .chatbot-header{
+    margin:-12px -12px 12px -12px;
+    padding:10px 12px;
+  }
+}
