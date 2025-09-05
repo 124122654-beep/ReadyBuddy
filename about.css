@@ -1,20 +1,22 @@
 /* ================================
    CSS VARIABLES - Junior Page Theme
    ================================ */
-:root {
-    /* Override shared.css defaults for Junior page */
-    --bar-bg: #f73030;
-    --bar-border: #1D4ED8;
-    --brand-ready: #ffc5c5;
-    --brand-buddy: #ffffff;
-    --cross-color: #1D4ED8;
-    --title-line1: #f73030;
-    --title-line2: #000000; /* SQUAD stays black */
-    
-    /* Junior-specific variables */
-    --page-subtitle: rgba(0, 0, 0, 0.7);
-    --active-pill-bg: #EF4444;
+:root{
+  --bar-bg:#3bb371;       /* navbar background */
+  --bar-border:#ffffff;   /* underline/border */
+
+  --brand-ready:#e0feca;  /* "READY" text */
+  --brand-buddy:#ffffff;  /* "BUDDY" text */
+  --cross-color:#ff0000;  /* cross icon */
+
+  --title-line1:#e0feca;  /* title line 1 */
+  --title-line2:#ffffff;  /* title line 2 */
+  --page-subtitle:#000000;  /* page subtitle */
+
+  --link-bg:#ffffff;      /* nav pill background */
+  --link-text:#111111;    /* nav pill text */
 }
+
         
 .hero-section {
             background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
