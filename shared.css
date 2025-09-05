@@ -24,7 +24,7 @@ body{
   display:flex; align-items:center; justify-content:space-between;
   width:100%; position:relative;
   padding:16px 0 18px;
-  border-bottom:7px solid var(--bar-border);
+  border-bottom:8px solid var(--bar-border);
 }
 .nav-menu-left,.nav-menu-right{
   color:#fff; font-size:1.05rem; display:flex; align-items:center; gap:18px;
