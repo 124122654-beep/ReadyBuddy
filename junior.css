@@ -80,7 +80,7 @@ body {
     }
     
     .chatbot-container iframe {
-          height: 85vh !important;
+          height: 75vh !important;
     }
 }
 
@@ -104,6 +104,6 @@ body {
     }
     
     .chatbot-container iframe {
-        height: 90vh !important;
+        height: 80vh !important;
     }
 }
