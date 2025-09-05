@@ -29,7 +29,6 @@
         }
 
         .section-title {
-            font-family: 'Space Mono', monospace;
             font-size: 2.5rem;
             color: #2C3E50;
             margin-bottom: 40px;
@@ -88,7 +87,6 @@
         }
 
         .value-card h3 {
-            font-family: 'Space Mono', monospace;
             font-size: 1.4rem;
             color: #2C3E50;
             margin-bottom: 15px;
@@ -125,7 +123,6 @@
         }
 
         .stat-number {
-            font-family: 'Space Mono', monospace;
             font-size: 3rem;
             font-weight: 700;
             color: #FFD93D;
@@ -135,64 +132,6 @@
         .stat-label {
             font-size: 18px;
             opacity: 0.9;
-        }
-
-        .team-section {
-            padding: 80px 40px;
-            background: white;
-        }
-
-        .team-section .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .team-member {
-            text-align: center;
-            padding: 30px;
-            background: #F8F9FA;
-            border-radius: 15px;
-        }
-
-        .member-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #4ECDC4, #44A08D);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 32px;
-            color: white;
-        }
-
-        .team-member h3 {
-            font-family: 'Space Mono', monospace;
-            font-size: 1.5rem;
-            color: #2C3E50;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
-
-        .member-role {
-            color: #4ECDC4;
-            font-weight: 600;
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
-
-        .member-bio {
-            color: #666;
-            line-height: 1.6;
         }
 
         .cta-section {
