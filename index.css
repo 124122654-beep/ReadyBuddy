@@ -71,7 +71,6 @@
    transform: translateY(-12px) scale(1.05);             /* lift + zoom */
    box-shadow: 0 20px 40px rgba(0,0,0,0.25);             /* deeper shadow */
    opacity: 1;                                           /* full opacity */
-   filter: saturate(1.15) brightness(1.02);              /* richer color */
 }
 .card-junior:hover{  box-shadow:0 20px 40px rgba(255,99,99,0.4); } /* red glow */
 .card-teen:hover{    box-shadow:0 20px 40px rgba(243,100,22,0.4); }/* orange glow */
