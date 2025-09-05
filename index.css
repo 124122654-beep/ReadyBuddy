@@ -114,17 +114,16 @@
   max-width:1200px;              /* limit width */
   margin:0 auto 40px auto;       /* center + space bottom */
   display:grid;                  /* grid layout */
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); /* responsive columns */
   gap:40px;                      /* space between columns */
 }
 
-.footer-column{ color:#000; }     /* black text inside */
+.footer-column{ color:#000; }    
 
 .footer-column h3{
   margin:0 0 20px 0;             /* space below */
-  font-size:18px;                /* medium size */
-  font-weight:700;               /* bold */
-  color:#3bb371;                 /* green color */
+  font-size:18px;                
+  font-weight:700;              
+  color:#3bb371;                 
   position:relative;
 }
 .footer-column h3::after{
@@ -132,35 +131,48 @@
   position:absolute;
   bottom:-5px; left:0;           /* little line under title */
   width:30px; height:3px;
-  background:#3bb371;            /* same green as text */
+  background:#3bb371;            
   border-radius:2px;
 }
 
-.footer-column ul{ list-style:none; padding:0; margin:0; } /* no bullets */
-.footer-column li{ margin-bottom:12px; } /* space between items */
+.footer-column ul{ 
+  list-style:none; 
+  padding:0; 
+  margin:0; 
+} 
+.footer-column li{ 
+  margin-bottom:12px; 
+} 
 .footer-column a{
-  color:#000;                    /* black links */
+  color:#000;                    
   text-decoration:none;          /* no underline */
-  font-size:14px;                /* small */
+  font-size:14px;                
   transition:color .3s, transform .3s; /* smooth hover */
 }
 .footer-column a:hover{
   color:red;                     /* red on hover */
-  transform:translateX(5px);     /* slide right a bit */
 }
 
 .footer-bottom{
-  border-top:1px solid rgba(0,0,0,0.1); /* faint top border */
-  padding-top:20px;              /* space above text */
+  border-top:1px solid rgba(0,0,0,0.1); 
+  padding-top:20px;              
   text-align:center;
-  color:#000;                    /* black text */
-  font-size:12px;                /* tiny text */
+  color:#000;                    
+  font-size:12px;                
 }
 
 .footer-links{
   display:flex;                  /* align links in row */
-  justify-content:center;        /* center them */
-  gap:20px;                      /* space between links */
+  justify-content:center;       
+  gap:20px;                      
   flex-wrap:wrap;                /* wrap on small screens */
 }
-.footer-links
+.footer-links a{
+  color:#000;
+  text-decoration:none;
+  transition:color .3s, transform .3s;
+}
+.footer-links a:hover{
+  color:red;
+  transform:translateY(-2px);    /* nudge up on hover */
+}
