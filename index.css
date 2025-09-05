@@ -34,6 +34,7 @@
   padding:48px 36px;             
   border-radius:24px;            
   text-decoration:none;          /* remove underline on links */
+  overflow:hidden; 
   box-shadow:0 8px 25px rgba(0,0,0,0.15); /* soft shadow */
   transition:transform .4s cubic-bezier(0.4,0,0.2,1), /* smooth size/lift */
              box-shadow .4s cubic-bezier(0.4,0,0.2,1);/* smooth shadow change */
