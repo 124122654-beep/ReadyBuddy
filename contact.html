@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Ready Buddy</title>
+    <title>Contact Us - Ready Buddy</title>
     <link rel="stylesheet" href="shared.css"/>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet">
 </head>
@@ -16,13 +16,11 @@
             <a href="teen.html"    class="nav-link nav-teen">Teen</a>
             <a href="parents.html" class="nav-link nav-parents">Parents</a>
         </nav>
-
         <div class="header" aria-label="Brand">
             <span class="ready">READY</span>
             <i class="fa-solid fa-xmark cross-emoji" aria-hidden="true"></i>
             <span class="buddy">BUDDY</span>
         </div>
-
         <nav class="nav-menu-right" aria-label="Utility links">
             <a href="index.html"    class="nav-link">Home</a>
             <a href="about.html"   class="nav-link">About</a>
@@ -30,75 +28,131 @@
         </nav>
     </header>
 
-
     <div class="page">
-        <div class="page-section">
-            <p class="page-subtitle">Adventure awaits brave explorers</p>
-            <h1 class="page-title">
-                <span class="page-title-line1">READY FOR</span>
-                <span class="page-title-line2">ADVENTURE</span>
-            </h1>
-            <div class="card-row">
-                <a href="junior.html" class="info-card card-junior">
-                    <h2 class="card-title">Junior Squad</h2>
-                    <p class="card-subtitle">For kids ages 6–10</p>
-                </a>
-                <a href="teen.html" class="info-card card-teen">
-                    <h2 class="card-title">Teen Squad</h2>
-                    <p class="card-subtitle">For kids ages 11–14</p>
-                </a>
-                <a href="parents.html" class="info-card card-parents card-link">
-                    <h2 class="card-title">Parent Squad</h2>
-                    <p class="card-subtitle">For parents of all ages</p>
-                </a>
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1 class="contact-title">GET IN TOUCH</h1>
+                <p class="contact-subtitle">We'd love to hear from you! Send us a message and we'll get back to you soon.</p>
+            </div>
+
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject" class="form-label">What's this about?</label>
+                    <select id="subject" name="subject" class="form-select" required>
+                        <option value="">Choose a topic...</option>
+                        <option value="general">General Question</option>
+                        <option value="bug">Bug Report</option>
+                        <option value="feature">Feature Request</option>
+                        <option value="parent">Parent Inquiry</option>
+                        <option value="safety">Safety Concern</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Tell us what's on your mind..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Other Ways to Reach Us</h3>
+                <p>Need help right away? Here are more ways to get in touch:</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@readybuddy.com</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fab fa-twitter"></i>
+                        <span>@ReadyBuddyApp</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-clock"></i>
+                        <span>We reply within 24 hours</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
     <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-column">
-            <h3>Game Resources</h3>
-            <ul>
-                <li><a href="#">How to Play</a></li>
-                <li><a href="#">Download Game</a></li>
-            </ul>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Game Resources</h3>
+                <ul>
+                    <li><a href="#">How to Play</a></li>
+                    <li><a href="#">Download Game</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Learning Hub</h3>
+                <ul>
+                    <li><a href="#">Skill Categories</a></li>
+                    <li><a href="#">Educational Resources</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#">Player Stories</a></li>
+                    <li><a href="#">News & Updates</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Bug Reports</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
         </div>
         
-        <div class="footer-column">
-            <h3>Learning Hub</h3>
-            <ul>
-                <li><a href="#">Skill Categories</a></li>
-                <li><a href="#">Educational Resources</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <span>© 2025 Ready Buddy</span>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Child Safety</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">COPPA Compliance</a>
+            </div>
         </div>
-        
-        <div class="footer-column">
-            <h3>Community</h3>
-            <ul>
-                <li><a href="#">Player Stories</a></li>
-                <li><a href="#">News & Updates</a></li>
-            </ul>
-        </div>
-        
-        <div class="footer-column">
-            <h3>Support</h3>
-            <ul>
-                <li><a href="#">Bug Reports</a></li>
-                <li><a href="#">Accessibility</a></li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="footer-bottom">
-        <div class="footer-links">
-            <span>© 2025 Ready Buddy</span>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Child Safety</a>
-            <a href="#">Cookie Policy</a>
-            <a href="#">COPPA Compliance</a>
-        </div>
-    </div>
-</footer>
+    </footer>
+
+    <script>
+        // Simple form handling
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            
+            // Show success message (you'd replace this with actual form submission)
+            alert(`Thanks ${name}! We got your message and will get back to you soon.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
 </body>
 </html>
