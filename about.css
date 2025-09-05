@@ -1,5 +1,22 @@
-
-        .hero-section {
+/* ================================
+   CSS VARIABLES - Junior Page Theme
+   ================================ */
+:root {
+    /* Override shared.css defaults for Junior page */
+    --bar-bg: #f73030;
+    --bar-border: #1D4ED8;
+    --brand-ready: #ffc5c5;
+    --brand-buddy: #ffffff;
+    --cross-color: #1D4ED8;
+    --title-line1: #f73030;
+    --title-line2: #000000; /* SQUAD stays black */
+    
+    /* Junior-specific variables */
+    --page-subtitle: rgba(0, 0, 0, 0.7);
+    --active-pill-bg: #EF4444;
+}
+        
+.hero-section {
             background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
             color: white;
             padding: 120px 40px 80px;
