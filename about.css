@@ -17,34 +17,6 @@
   --link-text:#111111;    /* nav pill text */
 }
 
-        
-.hero-section {
-            background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);
-            color: white;
-            padding: 120px 40px 80px;
-            text-align: center;
-        }
-
-        .page-subtitle {
-            font-size: 18px;
-            margin-bottom: 20px;
-            font-style: italic;
-            opacity: 0.9;
-        }
-
-        .page-title {
-            font-family: 'Space Mono', monospace;
-            font-size: 4rem;
-            font-weight: 700;
-            margin: 0;
-            line-height: 1.1;
-        }
-
-        .page-title-line1,
-        .page-title-line2 {
-            display: block;
-        }
-
         .story-section {
             padding: 80px 40px;
             background: white;
