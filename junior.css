@@ -1,51 +1,39 @@
-/* ================================
-   CSS VARIABLES - Junior Page Theme
-   ================================ */
-:root {
-    /* Override shared.css defaults for Junior page */
-    --bar-bg: #f73030;
-    --bar-border: #1D4ED8;
-    --brand-ready: #ffc5c5;
-    --brand-buddy: #ffffff;
-    --cross-color: #1D4ED8;
-    --title-line1: #f73030;
-    --title-line2: #000000; /* SQUAD stays black */
-    
-    /* Junior-specific variables */
-    --page-subtitle: rgba(0, 0, 0, 0.7);
-    --active-pill-bg: #EF4444;
+/* CSS VARIABLES - Junior Squad Theme */
+:root{
+  --bar-bg:#f73030;
+  --bar-border:#1D4ED8;
+   
+  --brand-ready:#ffc5c5;
+  --brand-buddy:#ffffff;
+  --cross-color:#1D4ED8;
+
+  --title-line1:#f73030;
+  --title-line2:#000000; 
+  --page-subtitle: rgba(0,0,0,0.7);
 }
 
-/* ================================
-   JUNIOR PAGE OVERRIDES
-   ================================ */
-body {
-    background-color: #fafafa !important;
+/* JUNIOR PAGE OVERRIDES */
+body{ background:#fafafa; }                
+
+.page-subtitle{
+  color: var(--page-subtitle);
+  margin-bottom: 20px;
 }
-
-.page-section {
-    background-color: #fafafa;
-}
-
-.page-subtitle {
-    color: var(--page-subtitle);
-    margin-bottom: 20px;
-}
-
-
 
 /* ================================
    CHATBOT COMPONENT
    ================================ */
-.chatbot-container {
-    width: 80%;
-    margin: -200px auto 40px auto; /* Removed top margin completely */
-    padding: 20px;
+.chatbot-container{
+  width: min(100%, 1100px);                 /* cap width so it doesn't stretch too wide */
+  margin: 24px auto 40px;                   /* center + breathing room */
+  padding: 20px;
 }
 
-.chatbot-container iframe {
-    height: 600px;
-    width: 100%;
+.chatbot-container iframe{
+  display: block;                           /* remove inline gaps */
+  width: 100%;                              /* fill container */
+  height: clamp(700px, 75vh, 1100px);       /* responsive height for kids to read comfortably */
+  border: 0;                                /* no border */
 }
 
 /* ================================
@@ -53,57 +41,43 @@ body {
    ================================ */
 
 /* Tablet and smaller desktop */
-@media (max-width: 768px) {
-    .page-section {
-        padding: 20px 16px;
-    }
-    
-    .page-title {
-        font-size: 2.4rem;
-        line-height: 1;
-        margin-bottom: 8px;
-    }
-    
-    .page-title-line2 {
-        font-size: 2.2rem;
-    }
-    
-    .page-subtitle {
-        font-size: 13px;
-        margin-bottom: 12px;
-    }
-    
-    .chatbot-container {
-        width: 90%;
-        margin: 20px auto;
-        padding: 15px;
-    }
-    
-    .chatbot-container iframe {
-          height: 75vh !important;
-    }
+@media (max-width: 768px){
+  .page-section{ padding: 20px 16px; }
+
+  .page-title{
+    font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .page-title-line2{ font-size: 2.2rem; }
+
+  .page-subtitle{
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .chatbot-container{
+    width: min(90%, 700px);
+    margin: 20px auto;
+    padding: 15px;
+  }
+  .chatbot-container iframe{
+    height: 75vh;                           /* fit nicely on tablets */
+  }
 }
 
 /* Small phones */
-@media (max-width: 480px) {
-    .page-section {
-        padding: 16px 12px;
-    }
-    
-    .page-title {
-        font-size: 2rem;
-    }
-    
-    .page-title-line2 {
-        font-size: 1.8rem;
-    }
-    
-    .chatbot-container {
-        width: 95%;
-        padding: 10px;
-    }
-    
-    .chatbot-container iframe {
-        height: 80vh !important;
-    }
+@media (max-width: 480px){
+  .page-section{ padding: 16px 12px; }
+
+  .page-title{ font-size: 2rem; }
+  .page-title-line2{ font-size: 1.8rem; }
+
+  .chatbot-container{
+    width: 95%;
+    padding: 10px;
+  }
+  .chatbot-container iframe{
+    height: 80vh;                           /* taller on small screens */
+  }
 }
