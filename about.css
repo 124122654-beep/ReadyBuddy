@@ -138,62 +138,6 @@ body {
             opacity: 0.9;
         }
 
-        .cta-section {
-            padding: 80px 40px;
-            color: white;
-            text-align: center;
-        }
-
-        .cta-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .cta-text {
-            font-size: 18px;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .cta-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cta-button {
-            padding: 15px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .cta-junior {
-            background: #FF6B6B;
-            color: white;
-        }
-
-        .cta-teen {
-            background: #FF8C42;
-            color: white;
-        }
-
-        .cta-parents {
-            background: #4A90E2;
-            color: white;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            border-color: white;
-        }
-
 /* Footer */
 .footer{
   background:#e0feca;
