@@ -39,18 +39,28 @@
              box-shadow .4s cubic-bezier(0.4,0,0.2,1);/* smooth shadow change */
 }
 
+/* light sweep across card */
+.info-card::before{
+  content:"";                    
+  position:absolute;
+  inset:0;                       /* cover whole card */
+  left:-100%;                    /* start shimmer off-screen left */
+  background:rgba(255,255,255,0.2); /* semi-transparent white */
+  transition:left .6s ease;      /* slide across smoothly */
+}
+.info-card:hover::before{ left:100%; } /* move shimmer to the right side */
 
 /* arrow appears on hover */
 .info-card::after{
   content:'→';                   /* arrow symbol */
   position:absolute;
-  top:20px;                      /* distance from top */
-  right:20px;                    /* distance from right */
-  font-size:1.5rem;              /* arrow size */
-  font-weight:bold;              /* bold arrow */
-  color:rgba(255,255,255,0.7);   /* semi-transparent white */
+  top:20px;                      
+  right:20px;                    
+  font-size:1.5rem;             
+  font-weight:bold;              
+  color:rgba(255,255,255,0.7);   
   opacity:0;                     /* invisible at start */
-  transform:translateX(-10px);   /* shifted left a little */
+  transform:translateX(-10px);   
   transition:opacity .3s ease,   /* fade smoothly */
              transform .3s ease; /* slide smoothly */
 }
@@ -64,10 +74,10 @@
 .card-teen{    background:linear-gradient(135deg,#F36416,#EA580C); }
 .card-parents{ background:linear-gradient(135deg,#1D4ED8,#3B82F6); }
 
-/* hover effect: lift + zoom + stronger shadow */
+/* hover effect: lift + zoom + shadow */
 .info-card:hover{
   transform: translateY(-12px)   /* lift card up slightly */
-             scale(1.05);        /* make card 5% bigger */
+             scale(1.05);        /* make card bigger */
   box-shadow:0 20px 40px rgba(0,0,0,0.25); /* deeper shadow */
 }
 .card-junior:hover{  box-shadow:0 20px 40px rgba(255,99,99,0.4); } /* red glow */
