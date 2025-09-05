@@ -15,17 +15,10 @@
 /* JUNIOR PAGE OVERRIDES */
 body{ background:#fafafa; }                
 
-.page-subtitle{
-  color: var(--page-subtitle);
-  margin-bottom: 20px;
-}
-
-/* ================================
-   CHATBOT COMPONENT
-   ================================ */
+/* CHATBOT SECTION */
 .chatbot-container{
-  width: min(100%, 1100px);                 /* cap width so it doesn't stretch too wide */
-  margin: 24px auto 40px;                   /* center + breathing room */
+  width: min(100%, 1100px);                 /* adjusted width so it doesn't stretch too wide */
+  margin: 24px auto 40px;                   
   padding: 20px;
 }
 
@@ -36,37 +29,7 @@ body{ background:#fafafa; }
   border: 0;                                /* no border */
 }
 
-/* ================================
-   MOBILE RESPONSIVE STYLES
-   ================================ */
-
-/* Tablet and smaller desktop */
-@media (max-width: 768px){
-  .page-section{ padding: 20px 16px; }
-
-  .page-title{
-    font-size: 2.4rem;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .page-title-line2{ font-size: 2.2rem; }
-
-  .page-subtitle{
-    font-size: 13px;
-    margin-bottom: 12px;
-  }
-
-  .chatbot-container{
-    width: min(90%, 700px);
-    margin: 20px auto;
-    padding: 15px;
-  }
-  .chatbot-container iframe{
-    height: 75vh;                           /* fit nicely on tablets */
-  }
-}
-
-/* Small phones */
+/* MOBILE SECTION   */
 @media (max-width: 480px){
   .page-section{ padding: 16px 12px; }
 
@@ -78,6 +41,6 @@ body{ background:#fafafa; }
     padding: 10px;
   }
   .chatbot-container iframe{
-    height: 80vh;                           /* taller on small screens */
+    height: 80vh;                          
   }
 }
