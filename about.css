@@ -44,7 +44,6 @@
 
         .values-section {
             padding: 80px 40px;
-            background: #F8F9FA;
         }
 
         .values-section .section-title {
@@ -100,7 +99,6 @@
 
         .impact-section {
             padding: 80px 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
         }
@@ -142,7 +140,6 @@
         }
 
         .cta-title {
-            font-family: 'Space Mono', monospace;
             font-size: 2.5rem;
             margin-bottom: 20px;
             font-weight: 700;
