@@ -83,19 +83,32 @@ body{
   text-decoration:none;
 }
 
+/* Shimmer sweep on hover (can be disabled with .no-shimmer on a parent) */
 .nav-link::before{
   content:""; position:absolute; inset:0; left:-100%;
   background:rgba(255,255,255,.25); transform:skewX(-20deg);
   transition:left .3s cubic-bezier(.4,0,.2,1);
 }
 .nav-link:hover::before{ left:100%; }
-.no-shimmer .nav-link::before{ display:none; } /* optional toggle */ 
+.no-shimmer .nav-link::before{ display:none; } /* optional toggle */
 
 /* Section-specific hover gradients */
 .nav-parents:hover{ background:linear-gradient(135deg,var(--hover-parents-1),var(--hover-parents-2)); color:#fff; }
 .nav-junior:hover { background:linear-gradient(135deg,var(--hover-junior-1), var(--hover-junior-2));  color:#fff; }
 .nav-teen:hover   { background:linear-gradient(135deg,var(--hover-teen-1),   var(--hover-teen-2));    color:#fff; }
 
+/* Optional: highlight current page (set aria-current="page" in HTML) */
+.nav-link[aria-current="page"]{
+  background: var(--active-pill-bg, var(--link-bg));
+  color: #fff;
+}
+
+/* Keyboard focus ring (accessibility) */
+.nav-link:focus-visible{
+  outline:3px solid currentColor;
+  outline-offset:2px;
+  box-shadow:0 0 0 4px rgba(255,255,255,.6);
+}
 /* PAGE TITLES */
 .page-subtitle{
   font-size:16px; font-weight:600; font-style:italic;
