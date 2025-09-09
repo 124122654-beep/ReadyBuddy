@@ -1,0 +1,494 @@
+/* Parents page theme variables */
+:root{
+  --bar-bg:#1D4ED8;          
+  --bar-border:#ff7300;      
+  --brand-ready:#cfe3ff;    
+  --brand-buddy:#ffffff;     
+  --cross-color:#ff7300;     
+
+  --link-bg:#ffffff;         
+  --link-text:#111111;       
+
+  --title-line1:#1D4ED8;  
+  --title-line2:#000000;     
+
+  --hover-parents-1:#1D4ED8; 
+  --hover-parents-2:#3B82F6; 
+  
+  /* Parents-specific variables */
+  --page-subtitle: rgba(0, 0, 0, 0.7);
+}
+
+/* Parents Page Overrides */
+.page-subtitle {
+    color: var(--page-subtitle);
+    margin-bottom: 20px;
+}
+
+/* Game Preview Section (card) */
+.game-preview-section{
+  background: linear-gradient(180deg, #ffffff, #f9fafb);
+  margin: 48px auto;
+  border-radius: 28px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(59,130,246,0.08);
+  border: 6px solid #3b82f6;
+  padding: 32px;
+  max-width: 1200px;
+  overflow: visible;
+}
+
+.features-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feature-showcase{
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.feature-showcase.reverse{ direction: rtl; }
+.feature-showcase.reverse > *{ direction: ltr; }
+
+/* Phone mockup */
+.phone-container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.phone-mockup{
+  width: 250px;
+  height: 500px;
+  background: black;
+  border-radius: 34px;
+  padding: 16px;
+  position: relative;
+  transform: perspective(1000px) rotateY(-4deg);
+  transition: transform .4s ease, box-shadow .4s ease;
+  box-shadow: 0 12px 24px rgba(0,0,0,.18);
+}
+.phone-mockup:hover{ box-shadow: 0 18px 36px rgba(0,0,0,.2); }
+
+.phone-screen{
+  width:100%; 
+  height:100%;
+  background:white; 
+  border-radius:29px;
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.phone-screen::before{
+  content:'';
+  position:absolute;
+  top:14px; 
+  left:50%; 
+  transform:translateX(-50%);
+  width:72px; height:8px;
+  background:rgba(0,0,0,.18);
+  border-radius:6px;
+}
+
+.phone-shot{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:30px;
+}
+
+/* Feature text content */
+.feature-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  margin-top:0;
+  max-width: none;
+}
+
+.feature-title{
+  font-size:1.9rem;
+  font-weight:800;
+  color:#3b82f6;
+  line-height:1.15;
+  margin:0 0 10px 0;
+}
+
+.feature-description{
+  font-size:1rem;
+  color:#55657a;
+  line-height:1.6;
+  margin:0 0 14px 0;
+  max-width: none;
+}
+
+.feature-list{ 
+  list-style:none; 
+  padding:0; 
+  margin:0; 
+}
+
+.feature-list li{
+  display:flex; 
+  align-items:center; 
+  gap:10px;
+  color:#465466; 
+  font-size:1.05rem; 
+  padding:6px 0;
+}
+.feature-list li::before{
+  content:'✓'; 
+  flex:0 0 22px; 
+  display:inline-block; 
+  text-align:center;
+  color:#3b82f6; 
+  font-weight:900; 
+  font-size:1.2rem;
+}
+
+/* --- Feature 1 --- */
+.feature-phone1 .phone-mockup{
+  transform: perspective(1000px) rotateY(0deg) translateY(40px);
+}
+.feature-phone1 .feature-title{ color:#1D4ED8; }
+.feature-phone1 .feature-content {
+  margin-top: 150px;
+  margin-left: 10px;
+}
+
+/* --- Feature 2 --- */
+.feature-phone2 .phone-container{ 
+  align-self:start; 
+  position:relative; 
+  z-index:3; 
+}
+.feature-phone2 .phone-mockup{
+  transform: perspective(1000px) rotateY(0deg) translateY(-30px) scale(1.03);
+}
+.feature-phone2 .feature-title{ color:#1D4ED8; }
+.feature-phone2 .feature-content {
+  margin-top: 90px;
+}
+
+/* --- Feature 3 --- */
+.feature-phone3 .phone-mockup{
+  transform: perspective(1000px) rotateY(0deg) translateY(-60px);
+}
+.feature-phone3 .feature-title{ color:#1D4ED8; }
+.feature-phone3 .feature-content {
+  margin-top: 90px;
+}
+
+/* Action Section */
+.action-section{
+  margin-top:-30px; 
+  padding:15px 10px; 
+  background:#3b82f6;
+  border-radius:30px; 
+  color:white; 
+  text-align:center; 
+  position:relative; 
+  overflow:hidden;
+}
+.action-content{ 
+  position:relative; 
+  z-index:2; 
+}
+
+.action-title{ 
+  font-size:2.2rem; 
+  font-weight:700; 
+  margin-bottom:10px;
+}
+
+.action-description{
+  font-size:1.2rem; 
+  opacity:.9; 
+  margin-bottom:30px; 
+  max-width:600px;
+  margin-left:auto; 
+  margin-right:auto; 
+  line-height:1.6;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.action-button{
+  line-height:1; 
+  display:inline-flex;
+  align-items:center; 
+  justify-content:center;
+  padding:20px 40px;
+  background:rgba(255,255,255,0.2);
+  border:2px solid rgba(255,255,255,0.3); 
+  border-radius:50px;
+  color:white; 
+  text-decoration:none; 
+  font-weight:600; 
+  font-size:1rem;
+}
+.action-button i{ 
+  margin-right:10px; 
+  font-size:1.2em; 
+  display:inline-flex; 
+}
+
+.action-button:hover{
+  background:white; 
+  color:#3b82f6; 
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* FAQ */
+.cards-section{
+  background:white; 
+  margin:60px auto; 
+  border-radius:40px;
+  position:relative;
+  border: 6px solid #3b82f6;
+  padding:40px; 
+  max-width:1200px;
+}
+.card .card-title{
+  font-size:1.8rem; 
+  font-weight:700; 
+  color:#3b82f6; 
+  margin-bottom:20px; 
+  text-align:center;
+}
+.card-content{ 
+  color:#666; 
+  margin-bottom:20px; 
+  text-align:center; 
+}
+
+.faq-section {
+  background: #fff;
+  border: 6px solid #3b82f6;
+  border-radius: 40px;
+  padding: 40px;
+  margin: 60px auto;
+  max-width: 1200px;
+}
+.faq-title{
+  font-size:2.2rem; 
+  font-weight:700; 
+  color:#3b82f6; 
+  margin-bottom:30px; 
+  text-align:center;
+}
+.faq-item{ 
+  border-bottom:1px solid #eee; 
+  padding:20px 0; 
+}
+
+.faq-question {
+  all: unset;               
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  padding: 14px 20px 14px 10px;
+  min-height: 44px;
+}
+
+.faq-question:hover { color: #1D4ED8; }
+
+.faq-answer { 
+  display: block;
+  padding: 8px 10px 16px; 
+  color: #444; 
+  line-height: 1.6;
+}
+
+.faq-answer[hidden] { 
+  display: none;
+}
+
+.faq-toggle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #ff7300;
+  margin-left: 12px;
+}
+
+/* FEEDBACK */
+.feedback-form{ 
+  display:flex; 
+  flex-direction:column; 
+  gap:15px; 
+}
+.feedback-textarea{
+  padding:15px; 
+  border:2px solid #eee; 
+  border-radius:12px; 
+  font-family:inherit;
+  min-height:120px; 
+  resize:vertical; 
+  transition:border-color .3s ease; 
+  background:white;
+}
+.feedback-textarea:focus{ 
+  outline:none; 
+  border-color:#3b82f6; 
+}
+
+.submit-btn{
+  background:#3b82f6; 
+  color:white; 
+  padding:15px 30px; 
+  border:none; 
+  border-radius:12px;
+  font-family:inherit; 
+  font-weight:600; 
+  cursor:pointer; 
+  align-self:flex-start;
+  transition:transform .3s ease, box-shadow .3s ease;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-btn:hover{ 
+  transform:translateY(-2px); 
+  box-shadow:0 8px 20px rgba(59,130,246,0.3); 
+}
+
+/* MOBILE RESPONSIVENESS */
+
+/* ============================
+   MOBILE RESPONSIVENESS
+============================ */
+
+/* Tablet & down */
+@media (max-width: 768px) {  
+
+  /* Card adjustments */
+  .game-preview-section {
+    margin: 16px 12px;
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;          /* prevent bleed */
+    border-width: 4px;
+  }
+
+  /* Stack phone above text */
+  .feature-showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  /* Reset reverse so stacking looks normal */
+  .feature-showcase.reverse { direction: ltr; }
+  .feature-showcase.reverse > * { direction: ltr; }
+
+  /* Phone mockup smaller + centered */
+  .phone-container { justify-content: center; }
+  .phone-mockup {
+    width: 200px;
+    height: 400px;
+    transform: none;   /* remove 3D tilt */
+    box-shadow: 0 10px 22px rgba(0,0,0,.15);
+  }
+
+  /* Text column clean + centered */
+  .feature-content {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+  }
+
+  .feature-title { font-size: 1.2rem; margin-bottom: 8px; }
+  .feature-description { font-size: 0.95rem; max-width: 100%; }
+  .feature-list li { font-size: 0.9rem; }
+
+  /* Reset weird per-feature offsets */
+  .feature-phone1 .feature-content,
+  .feature-phone2 .feature-content,
+  .feature-phone3 .feature-content {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .feature-phone1 .phone-mockup,
+  .feature-phone2 .phone-mockup,
+  .feature-phone3 .phone-mockup {
+    transform: none;
+  }
+
+  /* Section spacing */
+  .cards-section,
+  .faq-section {
+    margin: 24px 12px;
+    padding: 24px 16px;
+    border-width: 4px;
+    border-radius: 24px;
+  }
+
+  /* Fix action box spacing */
+  .action-section {
+    margin-top: 32px;    /* no overlap with checkmarks */
+    padding: 24px 16px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .phone-mockup {
+    width: 180px;
+    height: 360px;
+  }
+
+  .feature-title { font-size: 1.1rem; }
+  .feature-description { font-size: 0.9rem; }
+  .feature-list li { font-size: 0.85rem; }
+}
+
+/* Buttons on mobile */
+@media (max-width: 640px) {
+  .action-buttons {
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center horizontally */
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .action-button {
+    width: 180px;             /* consistent width */
+    padding: 10px 0;          /* less tall */
+    font-size: 0.85rem;
+    min-height: 34px;
+    border-radius: 12px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .action-button i {
+    margin-right: 6px;
+    font-size: 0.95em;
+  }
+}
+
+/* Extra safety */
+html, body { overflow-x: hidden; }

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parents — Ready Buddy</title>
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="parents.css" />
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER / NAVIGATION BAR -->
+  <header class="top-bar">
+    <nav class="nav-menu-left" aria-label="Section links">
+      <a href="junior.html"  class="nav-link nav-junior">Junior</a>
+      <a href="teen.html"    class="nav-link nav-teen">Teen</a>
+      <a href="parents.html" class="nav-link nav-parents is-active" aria-current="page">Parents</a>
+    </nav>
+
+    <div class="header" aria-label="Brand">
+      <span class="ready">READY</span>
+      <i class="fa-solid fa-xmark cross-emoji" aria-hidden="true"></i>
+      <span class="buddy">BUDDY</span>
+    </div>
+
+    <nav class="nav-menu-right" aria-label="Utility links">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a class="nav-link">About</a>
+      <a class="nav-link">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PARENTS MAIN CONTENT -->
+    <section class="page-section" aria-labelledby="parents-title">
+      <p class="page-subtitle">Guidance and support for every step</p>
+      <h1 id="parents-title" class="page-title">
+        <span class="page-title-line1">PARENTS</span>
+        <span class="page-title-line2">SQUAD</span>
+      </h1>
+    </section>
+
+    <!-- GAME PREVIEW -->
+    <section class="game-preview-section" aria-label="How Ready Buddy works">
+      <div class="features-grid">
+
+        <!-- Feature 1 : Age group selection (phone + content) -->
+        <div class="feature-showcase feature-phone1">
+          <div class="phone-container">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <img
+                  src="images/photo1.png"
+                  alt="Choose age group screen"
+                  width="540" height="1080"
+                  loading="lazy" decoding="async" class="phone-shot">
+              </div>
+            </div>
+          </div>
+          <div class="feature-content feature-text1">
+            <h3 class="feature-title">Pick the Right Squad</h3>
+            <p class="feature-description">
+              Children choose their age group to access age-appropriate challenges and themes.
+              Each squad is designed to match their level of curiosity and learning.
+            </p>
+            <ul class="feature-list">
+              <li>Junior (ages 6–10) for play-based learning</li>
+              <li>Teen (ages 11–14) for more advanced scenarios</li>
+              <li>Parents for guidance and oversight</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Feature 2 : Theme selection (phone + content) -->
+        <div class="feature-showcase reverse feature-phone2">
+          <div class="phone-container">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <img
+                  src="images/photo2.png"
+                  alt="AI Buddy hints and answers"
+                  width="540" height="1080"
+                  loading="lazy" decoding="async" class="phone-shot">
+              </div>
+            </div>
+          </div>
+          <div class="feature-content feature-text2">
+            <h3 class="feature-title">Choose Your Adventure</h3>
+            <p class="feature-description">
+               Kids have different themes to choose from, each packed with exciting challenges and scenarios.
+              From first aid to navigation skills, every theme offers unique survival learning experiences.
+            </p>
+            <ul class="feature-list">
+              <li>Rescue Ready - First aid and emergency response</li>
+              <li>Danger Busters - Safety awareness and protection</li>
+              <li>Nature Rangers - Outdoor survival and camping skills</li>
+              <li>Find Your Way - Navigation and orientation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Feature 3 : Progress and quiz  selection (phone + content) -->
+        <div class="feature-showcase feature-phone3">
+          <div class="phone-container">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <img
+                  src="images/photo3.png"
+                  alt="Progress tracking and final quiz"
+                  width="540" height="1080"
+                  loading="lazy" decoding="async" class="phone-shot">
+              </div>
+            </div>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Final Quiz & Checkmarks</h3>
+            <p class="feature-description">Play the games, check them off when you’re done, and unlock the final quiz to prove your survival skills.</p>
+            <ul class="feature-list">
+              <li>Checkmark each game as you finish</li>
+              <li>Unlock the final squad quiz</li>
+              <li>Show what you’ve learned</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTION SECTION -->
+      <div class="action-section">
+        <div class="action-content">
+          <h3 class="action-title">Ready to Start the Adventure?</h3>
+          <p class="action-description">
+            Join families using Ready Buddy to teach essential survival skills through fun, interactive games!
+          </p>
+          <div class="action-buttons">
+            <a href="#" class="action-button primary"><i class="fa-brands fa-apple"></i> Download Now</a>
+            <a href="#" class="action-button"><i class="fa-solid fa-play"></i> Watch Demo Video</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section class="cards-section" aria-label="Share feedback">
+      <div class="card">
+        <h2 class="card-title">Share Your Ideas</h2>
+        <p class="card-content">Tell us what you’d love to see next.</p>
+        <form class="feedback-form">
+          <label for="ideas" class="sr-only">Your ideas</label>
+          <textarea id="ideas" class="feedback-textarea" placeholder="Share your ideas, feedback, or suggestions..."></textarea>
+          <button type="submit" class="submit-btn">Submit Feedback</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <h2 class="faq-title">FAQ for Parents</h2>
+
+      <!-- Q1 -->
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-1">
+          What is Ready Buddy?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div id="faq-1" class="faq-answer" hidden>
+          Ready Buddy is an educational adventure app that teaches kids safety and survival skills
+          through fun, interactive games and challenges.
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-2">
+          Is Ready Buddy safe for my child?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div id="faq-2" class="faq-answer" hidden>
+          Yes, safety is our top priority. All content is age-appropriate.
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-3">
+          What age group is this suitable for?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div id="faq-3" class="faq-answer" hidden>
+          Ready Buddy is designed for children ages 6–15, with separate Junior Squad (6–11) and Teen
+          Squad (12–15) content tailored to their needs.
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="faq-item">
+        <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-4">
+          What is the chatbot feature?
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </button>
+        <div id="faq-4" class="faq-answer" hidden>
+          The chatbot is a built-in helper. Kids can ask it questions about the game or the theme they
+          just played, and it gives friendly explanations.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JAVASCRIPT SECTION -->
+  <script>
+    // FAQ section functionality  
+    function toggleFAQ(btn){
+      const answer = document.getElementById(btn.getAttribute('aria-controls'));
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      // Close all others items 
+      document.querySelectorAll('.faq-question').forEach(b=>{
+        if(b!==btn){ b.setAttribute('aria-expanded','false'); }
+      });
+      document.querySelectorAll('.faq-answer').forEach(a=>{
+        if(a!==answer){ a.hidden = true; }
+      });
+      document.querySelectorAll('.faq-toggle').forEach(t=>{
+        if(t!==btn.querySelector('.faq-toggle')){ t.textContent = '+'; }
+      });
+
+      // Toggle the current clicked item 
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      answer.hidden = isOpen;
+      btn.querySelector('.faq-toggle').textContent = isOpen ? '+' : '×';
+    }
+    document.querySelectorAll('.faq-question').forEach(b=>b.addEventListener('click', ()=>toggleFAQ(b)));
+  </script>
+</body>
+</html>

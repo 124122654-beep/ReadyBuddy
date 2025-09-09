@@ -1,0 +1,44 @@
+/* CSS VARIABLES - Junior Squad Theme */
+:root{
+  --bar-bg:#f73030;
+  --bar-border:#1D4ED8;
+   
+  --brand-ready:#ffc5c5;
+  --brand-buddy:#ffffff;
+  --cross-color:#1D4ED8;
+
+  --title-line1:#f73030;
+}
+
+/* JUNIOR PAGE OVERRIDES */
+body{ background:#fafafa; }                
+
+/* CHATBOT SECTION */
+.chatbot-container{
+  width: min(100%, 1100px);                 /* adjusted width so it doesn't stretch too wide */
+  margin: 24px auto 40px;                   
+  padding: 20px;
+}
+
+.chatbot-container iframe{
+  display: block;                           /* remove inline gaps */
+  width: 100%;                              /* fill container */
+  height: clamp(700px, 75vh, 1100px);       /* responsive height for kids to read comfortably */
+  border: 0;                                /* no border */
+}
+
+/* MOBILE SECTION   */
+@media (max-width: 480px){
+  .page-section{ padding: 16px 12px; }
+
+  .page-title{ font-size: 2rem; }
+  .page-title-line2{ font-size: 1.8rem; }
+
+  .chatbot-container{
+    width: 95%;
+    padding: 10px;
+  }
+  .chatbot-container iframe{
+    height: 80vh;                          
+  }
+}

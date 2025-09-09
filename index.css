@@ -1,0 +1,205 @@
+/* CSS VARIABLES (colors for navbar + page) */
+:root{
+  --bar-bg:#3bb371;       
+  --bar-border:#e0feca;  
+
+  --brand-ready:#e0feca; 
+  --brand-buddy:#ffffff;  
+  --cross-color:#ff0000;  
+
+  --title-line1:#3bb371;  
+  --title-line2:#000000;  
+  --page-subtitle:#000000;
+
+  --link-bg:#ffffff;    
+  --link-text:#111111;   
+}
+
+/* CARDS (Junior / Teen / Parents) */
+.card-row{
+  display:flex;                  /* arrange cards in a row */
+  justify-content:center;        
+  gap:32px;                     
+  margin-top:48px;               
+  flex-wrap:wrap;                /* allow wrapping on smaller screens */
+}
+
+.info-card{
+  position:relative;             
+  display:flex;                  
+  flex-direction:column;         /* put title + subtitle vertically */
+  align-items:center;            
+  min-width:260px;              
+  max-width:300px;              
+  padding:48px 36px;             
+  border-radius:24px;            
+  text-decoration:none;          /* remove underline on links */
+  overflow:hidden; 
+  box-shadow:0 8px 25px rgba(0,0,0,0.15); /* soft shadow */
+  transition:transform .4s cubic-bezier(0.4,0,0.2,1), /* smooth size/lift */
+             box-shadow .4s cubic-bezier(0.4,0,0.2,1);/* smooth shadow change */
+  opacity: .92;                            /* a bit see-through */
+  filter: saturate(0.95) brightness(0.98); /* slightly muted colors */
+}
+
+/* arrow appears on hover */
+.info-card::after{
+  content:'→';                   /* arrow symbol */
+  position:absolute;
+  top:20px;                      
+  right:20px;                    
+  font-size:1.5rem;             
+  font-weight:bold;              
+  color:rgba(255,255,255,0.7);   
+  opacity:0;                     /* invisible at start */
+  transform:translateX(-10px);   
+  transition:opacity .3s ease,   /* fade smoothly */
+             transform .3s ease; /* slide smoothly */
+}
+.info-card:hover::after{
+  opacity:1;                     /* arrow fades in */
+  transform:translateX(0);       /* arrow slides into place */
+}
+
+/* different background colors for each card */
+.card-junior{  background:linear-gradient(135deg,#FF6363,#EF4444); }
+.card-teen{    background:linear-gradient(135deg,#F36416,#EA580C); }
+.card-parents{ background:linear-gradient(135deg,#1D4ED8,#3B82F6); }
+
+/* hover effect: lift + zoom + shadow */
+.info-card:hover{
+   transform: translateY(-12px) scale(1.05);             /* lift + zoom */
+   box-shadow: 0 20px 40px rgba(0,0,0,0.25);             /* deeper shadow */
+   opacity: 1;                                           /* full opacity */
+}
+.card-junior:hover{  box-shadow:0 20px 40px rgba(255,99,99,0.4); }
+.card-teen:hover{    box-shadow:0 20px 40px rgba(243,100,22,0.4); }
+.card-parents:hover{ box-shadow:0 20px 40px rgba(29,78,216,0.4); }
+
+/* card text */
+.card-title{
+  margin:0 0 12px 0;             /* bottom spacing */
+  text-align:center;
+  font-size:1.5rem;              
+  font-weight:bold;              
+  color:#fff;                    
+}
+.card-subtitle{
+  margin:0;
+  text-align:center;
+  font-size:1.1rem;              
+  font-weight:500;              
+  font-style:italic;             
+  color:rgba(255,255,255,0.9);  
+}
+
+/* FOOTER */
+.footer{ 
+  background:#e0feca; 
+  padding:40px 40px 40px; 
+  margin-top:100px; 
+  border-radius:30px 30px 0 0; 
+} 
+.footer-content{
+  max-width:1200px; 
+  margin:0 auto; 
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); 
+  gap:40px; margin-bottom:40px; 
+} 
+
+.footer-column{ color:black; } 
+.footer-column h3{ 
+  font-size:18px; 
+  font-weight:700; 
+  margin-bottom:20px; 
+  color:#3bb371; 
+  position:relative; 
+} 
+.footer-column h3::after{ 
+  content:''; 
+  position:absolute; 
+  bottom:-5px; left:0; 
+  width:30px; height:3px; 
+  background:#3bb371; 
+  border-radius:2px; 
+} 
+.footer-column ul{ 
+  list-style:none; 
+  padding:0; 
+  margin:0; 
+} 
+.footer-column li{ margin-bottom:12px; } 
+.footer-column a{ 
+  color:black; 
+  text-decoration:none; 
+  font-size:14px; 
+  transition:all .3s; 
+  position:relative; 
+} 
+.footer-column a:hover{ 
+  color:red;
+} 
+
+.footer-bottom{ 
+  border-top:1px solid rgba(0,0,0,0.1); 
+  padding-top:20px; 
+  text-align:center; 
+  color:black; 
+  font-size:12px; 
+} 
+
+.footer-links{ 
+  display:flex; 
+  justify-content:center; 
+  gap:20px; 
+  flex-wrap:wrap; 
+} 
+.footer-links a{ 
+  color:black; 
+  text-decoration:none; 
+} 
+
+/* Mobile responsive cards */
+@media (max-width: 768px) {
+  .card-row {
+    gap: 20px;
+    margin-top: 32px;
+  }
+  
+  .info-card {
+    min-width: 200px;
+    max-width: 240px;
+    padding: 32px 24px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .card-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-row {
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .info-card {
+    min-width: 160px;
+    max-width: 200px;
+    padding: 24px 20px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .card-subtitle {
+    font-size: 0.9rem;
+  }
+}
