@@ -27,7 +27,7 @@ body{ background:#fafafa; }
   border: 0;                                /* no border */
 }
 
-/* MOBILE SECTION   */
+/* MOBILE SECTION */
 @media (max-width: 480px){
   .page-section{ padding: 16px 12px; }
 
