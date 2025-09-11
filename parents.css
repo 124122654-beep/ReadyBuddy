@@ -375,11 +375,6 @@
 
 /* MOBILE RESPONSIVENESS */
 
-/* ============================
-   MOBILE RESPONSIVENESS
-============================ */
-
-/* Tablet & down */
 @media (max-width: 768px) {  
 
   /* Card adjustments */
@@ -387,7 +382,7 @@
     margin: 16px 12px;
     padding: 20px;
     border-radius: 20px;
-    overflow: hidden;          /* prevent bleed */
+    overflow: hidden;          
     border-width: 4px;
   }
 
@@ -452,7 +447,6 @@
   }
 }
 
-/* Small phones */
 @media (max-width: 480px) {
   .phone-mockup {
     width: 180px;
@@ -490,5 +484,3 @@
   }
 }
 
-/* Extra safety */
-html, body { overflow-x: hidden; }
