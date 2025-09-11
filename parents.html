@@ -212,27 +212,35 @@
   <!-- JAVASCRIPT SECTION -->
   <script>
     // FAQ section functionality  
-    function toggleFAQ(btn){
-      const answer = document.getElementById(btn.getAttribute('aria-controls'));
-      const isOpen = btn.getAttribute('aria-expanded') === 'true';
-
-      // Close all others items 
-      document.querySelectorAll('.faq-question').forEach(b=>{
-        if(b!==btn){ b.setAttribute('aria-expanded','false'); }
+    function toggleFAQ(clickedButton) {
+      // Find the answer that belongs to this button
+      const answer = document.getElementById(clickedButton.getAttribute('aria-controls'));
+      const isOpen = clickedButton.getAttribute('aria-expanded') === 'true';
+      
+      // Step 1: Close ALL FAQ items first
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.setAttribute('aria-expanded', 'false');
+        button.querySelector('.faq-toggle').textContent = '+';
       });
-      document.querySelectorAll('.faq-answer').forEach(a=>{
-        if(a!==answer){ a.hidden = true; }
+      
+      document.querySelectorAll('.faq-answer').forEach(answer => {
+        answer.hidden = true;
       });
-      document.querySelectorAll('.faq-toggle').forEach(t=>{
-        if(t!==btn.querySelector('.faq-toggle')){ t.textContent = '+'; }
-      });
-
-      // Toggle the current clicked item 
-      btn.setAttribute('aria-expanded', String(!isOpen));
-      answer.hidden = isOpen;
-      btn.querySelector('.faq-toggle').textContent = isOpen ? '+' : '×';
+      
+      // Step 2: If this item wasn't open before, open it now
+      if (!isOpen) {
+        clickedButton.setAttribute('aria-expanded', 'true');
+        answer.hidden = false;
+        clickedButton.querySelector('.faq-toggle').textContent = '×';
+      }
     }
-    document.querySelectorAll('.faq-question').forEach(b=>b.addEventListener('click', ()=>toggleFAQ(b)));
+    
+    // Connect the function to all FAQ buttons
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', function() {
+        toggleFAQ(button);
+      });
+    });
   </script>
 </body>
 </html>
