@@ -401,10 +401,6 @@
     align-items: start;
   }
 
-  /* Reset reverse so stacking looks normal */
-  .feature-showcase.reverse { direction: ltr; }
-  .feature-showcase.reverse > * { direction: ltr; }
-
   /* Phone mockup smaller + centered */
   .phone-container { justify-content: center; }
   .phone-mockup {
