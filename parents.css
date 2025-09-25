@@ -52,8 +52,15 @@
   align-items: start;
 }
 
-.feature-showcase.reverse{ direction: rtl; }
-.feature-showcase.reverse > *{ direction: ltr; }
+.feature-showcase.reverse {
+  grid-template-columns: 8fr 4fr; /* swap the column sizes */
+}
+.feature-showcase.reverse .phone-container {
+  order: 2; /* move phone to right */
+}
+.feature-showcase.reverse .feature-content {
+  order: 1; /* move content to left */
+}
 
 /* Phone mockup */
 .phone-container{
