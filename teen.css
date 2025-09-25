@@ -48,7 +48,7 @@ body{ background:#fafafa; }
   position:relative;                     
 }
 
-/* Placeholder text until chatbot is embeded */
+/* Placeholder text until chatbot is embedded */
 .chatbot-placeholder{
   height:100%;
   display:flex; align-items:center; justify-content:center;
