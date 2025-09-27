@@ -52,15 +52,8 @@
   align-items: start;
 }
 
-.feature-showcase.reverse {
-  grid-template-columns: 8fr 4fr; /* swap the column sizes */
-}
-.feature-showcase.reverse .phone-container {
-  order: 2; /* move phone to right */
-}
-.feature-showcase.reverse .feature-content {
-  order: 1; /* move content to left */
-}
+.feature-showcase.reverse{ direction: rtl; }
+.feature-showcase.reverse > *{ direction: ltr; }
 
 /* Phone mockup */
 .phone-container{
@@ -382,6 +375,11 @@
 
 /* MOBILE RESPONSIVENESS */
 
+/* ============================
+   MOBILE RESPONSIVENESS
+============================ */
+
+/* Tablet & down */
 @media (max-width: 768px) {  
 
   /* Card adjustments */
@@ -389,7 +387,7 @@
     margin: 16px 12px;
     padding: 20px;
     border-radius: 20px;
-    overflow: hidden;          
+    overflow: hidden;          /* prevent bleed */
     border-width: 4px;
   }
 
@@ -400,6 +398,10 @@
     gap: 24px;
     align-items: start;
   }
+
+  /* Reset reverse so stacking looks normal */
+  .feature-showcase.reverse { direction: ltr; }
+  .feature-showcase.reverse > * { direction: ltr; }
 
   /* Phone mockup smaller + centered */
   .phone-container { justify-content: center; }
@@ -450,6 +452,7 @@
   }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
   .phone-mockup {
     width: 180px;
@@ -487,3 +490,5 @@
   }
 }
 
+/* Extra safety */
+html, body { overflow-x: hidden; }
