@@ -375,10 +375,6 @@
 
 /* MOBILE RESPONSIVENESS */
 
-/* ============================
-   MOBILE RESPONSIVENESS
-============================ */
-
 /* Tablet & down */
 @media (max-width: 768px) {  
 
@@ -423,7 +419,6 @@
   .feature-description { font-size: 0.95rem; max-width: 100%; }
   .feature-list li { font-size: 0.9rem; }
 
-  /* Reset weird per-feature offsets */
   .feature-phone1 .feature-content,
   .feature-phone2 .feature-content,
   .feature-phone3 .feature-content {
@@ -445,7 +440,6 @@
     border-radius: 24px;
   }
 
-  /* Fix action box spacing */
   .action-section {
     margin-top: 32px;    /* no overlap with checkmarks */
     padding: 24px 16px;
