@@ -100,7 +100,6 @@ body{
 }
 
 /* MOBILE SECTION  */
-/* MOBILE SECTION  */
 @media (max-width: 768px) {
   .top-bar { 
     flex-direction: column;      /* stack items */
@@ -116,7 +115,7 @@ body{
     order: unset;                /* no special order */
     margin: 0;
     justify-content: center;
-    flex-wrap: wrap;             /* wrap if too many buttons */
+    flex-wrap: wrap;            
     gap: 10px;
     width: 100%;
   }
