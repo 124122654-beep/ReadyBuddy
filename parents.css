@@ -445,7 +445,6 @@
   }
 }
 
-/* Small phones */
 @media (max-width: 480px) {
   .phone-mockup {
     width: 180px;
@@ -457,7 +456,6 @@
   .feature-list li { font-size: 0.85rem; }
 }
 
-/* Buttons on mobile */
 @media (max-width: 640px) {
   .action-buttons {
     display: flex;
